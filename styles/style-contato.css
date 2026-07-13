@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #8b0000,
+        #a30000,
+        #7a0000
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header{
+
+    background:#111;
+
+    border-bottom:4px solid #ffd700;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 30px;
+
+}
+
+
+header h1{
+
+    font-family:'Bebas Neue', sans-serif;
+
+    font-size:2.3rem;
+
+    color:#ffd700;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.voltar{
+
+    color:#ffd700;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+
+.voltar:hover{
+
+    color:white;
+
+}
+
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner{
+
+    text-align:center;
+
+    padding:60px 20px 40px;
+
+}
+
+
+
+.banner h2{
+
+    font-family:'Bebas Neue', sans-serif;
+
+    font-size:4rem;
+
+    color:#ffd700;
+
+    letter-spacing:4px;
+
+    text-shadow:0 0 15px #ff4500;
+
+}
+
+
+
+.banner p{
+
+    margin-top:10px;
+
+    font-size:1.1rem;
+
+}
+
+
+
+/* =========================
+   CARDS DE CONTATO
+========================= */
+
+
+.contato-container{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:30px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.card-contato{
+
+    background:#111;
+
+    border-top:5px solid #ffd700;
+
+    border-radius:15px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+
+.card-contato:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 0 20px rgba(255,215,0,.4);
+
+}
+
+
+
+.card-contato h3{
+
+    color:#ffd700;
+
+    font-size:1.5rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card-contato p{
+
+    color:#ddd;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+
+.botao{
+
+    display:inline-block;
+
+    padding:12px 25px;
+
+    border:2px solid #ffd700;
+
+    border-radius:10px;
+
+    color:#ffd700;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+.botao:hover{
+
+    background:#ffd700;
+
+    color:#111;
+
+}
+
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+
+.formulario{
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:50px auto;
+
+    background:#111;
+
+    border-left:6px solid #ffd700;
+
+    border-radius:15px;
+
+    padding:30px;
+
+}
+
+
+
+.formulario h2{
+
+    text-align:center;
+
+    font-family:'Bebas Neue',sans-serif;
+
+    font-size:2.5rem;
+
+    color:#ffd700;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+input,
+textarea{
+
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#222;
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:15px;
+
+}
+
+
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#aaa;
+
+}
+
+
+
+textarea{
+
+    height:150px;
+
+    resize:none;
+
+}
+
+
+
+
+button{
+
+    padding:15px;
+
+    background:#ffd700;
+
+    color:#111;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    background:white;
+
+}
+
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+
+footer{
+
+    margin-top:50px;
+
+    background:#111;
+
+    border-top:4px solid #ffd700;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+
+footer p{
+
+    color:#ddd;
+
+    margin:5px;
+
+}
+
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+
+@media(max-width:900px){
+
+
+    .contato-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    header h1{
+
+        font-size:1.8rem;
+
+    }
+
+
+
+    .banner h2{
+
+        font-size:2.8rem;
+
+    }
+
+
+
+    .formulario h2{
+
+        font-size:2rem;
+
+    }
+
+
+}
