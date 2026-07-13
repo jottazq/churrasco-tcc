@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrasco do Baiano Sem Miséria</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
+
+<nav class="sidebar" id="menu">
+    <h2>MENU</h2>
+
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="cardapio.html">🍖 Cardápio</a></li>
+        <li><a href="galeria.html">📸 Galeria</a></li>
+        <li><a href="sobre.html">👨‍🍳 Sobre Nós</a></li>
+        <li><a href="localizacao.html">📍 Localização</a></li>
+        <li><a href="contato.html">📞 Contato</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <h1>CHURRASCO DO BAIANO SEM MISÉRIA</h1>
+
+    <p>
+        Sabor, tradição e qualidade em cada corte.
+    </p>
+
+    <a href="cardapio.html" class="btn">
+        VER CARDÁPIO
+    </a>
+
+</section>
+
+<section class="destaques">
+
+    <h2 class="titulo">NOSSOS DESTAQUES</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🥩 Carnes Selecionadas</h3>
+            <p>Cortes especiais preparados na brasa.</p>
+        </div>
+
+        <div class="card">
+            <h3>🥤 Bebidas Geladas</h3>
+            <p>As melhores bebidas para acompanhar seu churrasco.</p>
+        </div>
+
+        <div class="card">
+            <h3>👨‍👩‍👧‍👦 Ambiente Familiar</h3>
+            <p>Conforto e qualidade para toda a família.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p><strong>Churrasco do Baiano Sem Miséria</strong></p>
+    <p>📍 Duque de Caxias - RJ</p>
+    <p>© 2026 Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
