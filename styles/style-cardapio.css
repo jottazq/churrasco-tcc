@@ -1,0 +1,173 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(
+        180deg,
+        #8b0000 0%,
+        #a30000 50%,
+        #7a0000 100%
+    );
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header{
+    background: #111;
+    padding: 20px;
+    border-bottom: 4px solid #ffc107;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.voltar{
+    color: #ffc107;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.voltar:hover{
+    color: white;
+}
+
+/* =========================
+   TÍTULO PRINCIPAL
+========================= */
+
+.pagina-cardapio{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.pagina-cardapio h1{
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    color: #ffd700;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    text-shadow:
+        0 0 10px #ffcc00,
+        0 0 20px #ff6600;
+}
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categoria{
+    background: #111;
+    border-left: 6px solid #ffd700;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.categoria h2{
+    color: #ffd700;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   ITENS DO CARDÁPIO
+========================= */
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
+}
+
+.item:last-child{
+    border-bottom: none;
+}
+
+.item:hover{
+    background: rgba(255, 193, 7, 0.08);
+    padding-left: 10px;
+}
+
+.item h3{
+    font-size: 1.1rem;
+    color: white;
+}
+
+.item span{
+    color: #ffd700;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.item p{
+    width: 100%;
+    margin-top: 8px;
+    color: #d8d8d8;
+    line-height: 1.5;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+    margin-top: 40px;
+    background: #111;
+    border-top: 4px solid #ffd700;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p{
+    color: #ccc;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:768px){
+
+    .pagina-cardapio h1{
+        font-size: 3rem;
+    }
+
+    .categoria h2{
+        font-size: 1.8rem;
+    }
+
+    .item{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .item span{
+        font-size: 1rem;
+    }
+}

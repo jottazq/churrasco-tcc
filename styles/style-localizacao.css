@@ -1,0 +1,214 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#8b0000 0%,#a30000 50%,#7a0000 100%);
+    color:#fff;
+    min-height:100vh;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header{
+    background:#111;
+    border-bottom:4px solid #ffd700;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:2.2rem;
+    color:#ffd700;
+    letter-spacing:2px;
+}
+
+.voltar{
+    color:#ffd700;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.voltar:hover{
+    color:#fff;
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.banner h2{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:4rem;
+    color:#ffd700;
+    letter-spacing:4px;
+    text-shadow:0 0 15px #ff4500;
+}
+
+.banner p{
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.informacoes{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    border-left:6px solid #ffd700;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,215,0,.3);
+}
+
+.card h2{
+    color:#ffd700;
+    margin-bottom:15px;
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:2px;
+}
+
+.card p{
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* =========================
+   MAPA
+========================= */
+
+.mapa{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    text-align:center;
+}
+
+.mapa h2{
+    font-family:'Bebas Neue',sans-serif;
+    color:#ffd700;
+    font-size:2.5rem;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.mapa iframe{
+    width:100%;
+    max-width:1000px;
+    height:450px;
+    border:none;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botoes{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:40px 20px;
+}
+
+.btn{
+    background:#111;
+    color:#ffd700;
+    text-decoration:none;
+    padding:15px 30px;
+    border:2px solid #ffd700;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffd700;
+    color:#111;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+    margin-top:50px;
+    background:#111;
+    border-top:4px solid #ffd700;
+    text-align:center;
+    padding:25px;
+}
+
+footer p{
+    margin:5px 0;
+    color:#ddd;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:768px){
+
+    .informacoes{
+        grid-template-columns:1fr;
+    }
+
+    .banner h2{
+        font-size:2.8rem;
+    }
+
+    .mapa iframe{
+        height:300px;
+    }
+
+    .btn{
+        width:90%;
+        text-align:center;
+    }
+
+}
