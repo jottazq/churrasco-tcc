@@ -15,11 +15,24 @@
 
 <header>
 
-    <a href="index.html" class="voltar">← Início</a>
-
-    <h1>Sobre Nós</h1>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 </header>
+
+<nav class="sidebar" id="menu">
+
+    <h2>MENU</h2>
+
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="cardapio.html">🍖 Cardápio</a></li>
+        <li><a href="galeria.html">📸 Galeria</a></li>
+        <li><a href="sobre-nos.html">👨‍🍳 Sobre Nós</a></li>
+        <li><a href="localizacao.html">📍 Localização</a></li>
+        <li><a href="contato.html">📞 Contato</a></li>
+    </ul>
+
+</nav>
 
 <section class="banner">
 
@@ -72,8 +85,7 @@
         <h3>❤️ Valores</h3>
 
         <p>
-            Respeito, honestidade, qualidade, higiene e atendimento com
-            excelência.
+            Respeito, honestidade, qualidade, higiene e atendimento com excelência.
         </p>
 
     </div>
@@ -85,17 +97,11 @@
     <h2>Por que escolher o Baiano?</h2>
 
     <ul>
-
         <li>🥩 Carnes selecionadas.</li>
-
         <li>🔥 Churrasco preparado na brasa.</li>
-
         <li>👨‍👩‍👧‍👦 Ambiente familiar.</li>
-
         <li>⭐ Atendimento de qualidade.</li>
-
         <li>💰 Excelente custo-benefício.</li>
-
     </ul>
 
 </section>
@@ -114,6 +120,11 @@
 
 </footer>
 
-</body>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
+</body>
 </html>
