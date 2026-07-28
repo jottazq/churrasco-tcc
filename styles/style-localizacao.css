@@ -1,214 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
+    <title>Localização - Churrasco do Baiano Sem Miséria</title>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    <link rel="stylesheet" href="styles/style-localizacao.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+<nav class="sidebar" id="menu">
+
+    <h2>MENU</h2>
+
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="cardapio.html">🍖 Cardápio</a></li>
+        <li><a href="galeria.html">📸 Galeria</a></li>
+        <li><a href="sobre-nos.html">👨‍🍳 Sobre Nós</a></li>
+        <li><a href="localizacao.html">📍 Localização</a></li>
+        <li><a href="contato.html">📞 Contato</a></li>
+    </ul>
+
+</nav>
+
+<section class="banner">
+
+    <h2>ONDE ESTAMOS</h2>
+
+    <p>Venha conhecer o Churrasco do Baiano Sem Miséria.</p>
+
+</section>
+
+<section class="informacoes">
+
+    <div class="card">
+
+        <h2>📍 Endereço</h2>
+
+        <p>
+            Av. Automóvel Clube, 1471 - Santa Cruz da Serra, Duque de Caxias - RJ, 25255-030
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🕒 Horário de Funcionamento</h2>
+
+        <p>
+            Segunda - 18:00 às 22:00<br>
+            Quarta - 18:00 às 22:00<br>
+            Quinta - 18:00 às 22:00<br>
+            Sexta - 18:00 às 22:00<br>
+            Sábado - 11:00 às 21:30<br>
+            Domingo - 11:00 às 15:30
+        </p>
+
+    </div>
+
+</section>
+
+<section class="mapa">
+
+    <h2>📌 Nossa Localização</h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14728.835949009852!2d-43.242477!3d-22.6459954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99739fee4b2177%3A0xe0c76dd580b94c85!2sChurrasco%20do%20Baiano%20Sem%20Mis%C3%A9ria!5e0!3m2!1spt-BR!2sbr!4v1783979134145!5m2!1spt-BR!2sbr"
+        loading="lazy"
+        allowfullscreen="">
+    </iframe>
+
+</section>
+
+<section class="botoes">
+
+    <a href="https://maps.app.goo.gl/tHkhDJP7Q5EtsfBT7" class="btn">📍 Abrir no Google Maps</a>
+
+    <a href="https://waze.com/ul/h75cppqf9k" class="btn">🚗 Abrir no Waze</a>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Churrasco do Baiano Sem Miséria</p>
+
+    <p>Duque de Caxias - RJ</p>
+
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
 }
+</script>
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(180deg,#8b0000 0%,#a30000 50%,#7a0000 100%);
-    color:#fff;
-    min-height:100vh;
-}
+</body>
 
-/* =========================
-   CABEÇALHO
-========================= */
-
-header{
-    background:#111;
-    border-bottom:4px solid #ffd700;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 30px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-header h1{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:2.2rem;
-    color:#ffd700;
-    letter-spacing:2px;
-}
-
-.voltar{
-    color:#ffd700;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.voltar:hover{
-    color:#fff;
-}
-
-/* =========================
-   BANNER
-========================= */
-
-.banner{
-    text-align:center;
-    padding:60px 20px;
-}
-
-.banner h2{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:4rem;
-    color:#ffd700;
-    letter-spacing:4px;
-    text-shadow:0 0 15px #ff4500;
-}
-
-.banner p{
-    margin-top:10px;
-    font-size:1.2rem;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.informacoes{
-    width:90%;
-    max-width:1000px;
-    margin:30px auto;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
-.card{
-    background:#111;
-    border-left:6px solid #ffd700;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 0 20px rgba(0,0,0,.4);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 20px rgba(255,215,0,.3);
-}
-
-.card h2{
-    color:#ffd700;
-    margin-bottom:15px;
-    font-family:'Bebas Neue',sans-serif;
-    letter-spacing:2px;
-}
-
-.card p{
-    line-height:1.8;
-    color:#ddd;
-}
-
-/* =========================
-   MAPA
-========================= */
-
-.mapa{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
-    text-align:center;
-}
-
-.mapa h2{
-    font-family:'Bebas Neue',sans-serif;
-    color:#ffd700;
-    font-size:2.5rem;
-    margin-bottom:20px;
-    letter-spacing:2px;
-}
-
-.mapa iframe{
-    width:100%;
-    max-width:1000px;
-    height:450px;
-    border:none;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-/* =========================
-   BOTÕES
-========================= */
-
-.botoes{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin:40px 20px;
-}
-
-.btn{
-    background:#111;
-    color:#ffd700;
-    text-decoration:none;
-    padding:15px 30px;
-    border:2px solid #ffd700;
-    border-radius:10px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#ffd700;
-    color:#111;
-}
-
-/* =========================
-   RODAPÉ
-========================= */
-
-footer{
-    margin-top:50px;
-    background:#111;
-    border-top:4px solid #ffd700;
-    text-align:center;
-    padding:25px;
-}
-
-footer p{
-    margin:5px 0;
-    color:#ddd;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media(max-width:768px){
-
-    .informacoes{
-        grid-template-columns:1fr;
-    }
-
-    .banner h2{
-        font-size:2.8rem;
-    }
-
-    .mapa iframe{
-        height:300px;
-    }
-
-    .btn{
-        width:90%;
-        text-align:center;
-    }
-
-}
+</html>
