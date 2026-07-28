@@ -18,11 +18,24 @@
 
 <header>
 
-    <a href="index.html" class="voltar">← Início</a>
-
-    <h1>Localização</h1>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 </header>
+
+<nav class="sidebar" id="menu">
+
+    <h2>MENU</h2>
+
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="cardapio.html">🍖 Cardápio</a></li>
+        <li><a href="galeria.html">📸 Galeria</a></li>
+        <li><a href="sobre-nos.html">👨‍🍳 Sobre Nós</a></li>
+        <li><a href="localizacao.html">📍 Localização</a></li>
+        <li><a href="contato.html">📞 Contato</a></li>
+    </ul>
+
+</nav>
 
 <section class="banner">
 
@@ -39,7 +52,7 @@
         <h2>📍 Endereço</h2>
 
         <p>
-           Av. Automóvel Clube, 1471 - Santa Cruz da Serra, Duque de Caxias - RJ, 25255-030
+            Av. Automóvel Clube, 1471 - Santa Cruz da Serra, Duque de Caxias - RJ, 25255-030
         </p>
 
     </div>
@@ -54,7 +67,7 @@
             Quinta - 18:00 às 22:00<br>
             Sexta - 18:00 às 22:00<br>
             Sábado - 11:00 às 21:30<br>
-            Domingo - 11:00 às 15:30<br>
+            Domingo - 11:00 às 15:30
         </p>
 
     </div>
@@ -65,13 +78,11 @@
 
     <h2>📌 Nossa Localização</h2>
 
-    <iframe 
+    <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14728.835949009852!2d-43.242477!3d-22.6459954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99739fee4b2177%3A0xe0c76dd580b94c85!2sChurrasco%20do%20Baiano%20Sem%20Mis%C3%A9ria!5e0!3m2!1spt-BR!2sbr!4v1783979134145!5m2!1spt-BR!2sbr"
         loading="lazy"
         allowfullscreen="">
     </iframe>
-
-</section>
 
 </section>
 
@@ -90,6 +101,12 @@
     <p>Duque de Caxias - RJ</p>
 
 </footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 
