@@ -12,8 +12,21 @@
 <body>
 
 <header>
-    <a href="index.html" class="voltar">← Voltar</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </header>
+
+<nav class="sidebar" id="menu">
+    <h2>MENU</h2>
+
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="cardapio.html">🍖 Cardápio</a></li>
+        <li><a href="galeria.html">📸 Galeria</a></li>
+        <li><a href="sobre-nos.html">👨‍🍳 Sobre Nós</a></li>
+        <li><a href="localizacao.html">📍 Localização</a></li>
+        <li><a href="contato.html">📞 Contato</a></li>
+    </ul>
+</nav>
 
 <section class="pagina-cardapio">
 
@@ -124,6 +137,11 @@
 <footer>
     <p>© 2026 Churrasco do Baiano Sem Miséria</p>
 </footer>
+    <script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+    </script>
 
 </body>
 </html>
