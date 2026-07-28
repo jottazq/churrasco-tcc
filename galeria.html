@@ -13,88 +13,99 @@
 
 <body>
 
-    <!-- Cabeçalho -->
+<header>
 
-    <header>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-        <a href="index.html" class="voltar">← Início</a>
+</header>
 
-        <h1>Galeria</h1>
+<nav class="sidebar" id="menu">
 
-    </header>
+    <h2>MENU</h2>
 
-    <!-- Título -->
+    <ul>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="cardapio.html">🍖 Cardápio</a></li>
+        <li><a href="galeria.html">📸 Galeria</a></li>
+        <li><a href="sobre-nos.html">👨‍🍳 Sobre Nós</a></li>
+        <li><a href="localizacao.html">📍 Localização</a></li>
+        <li><a href="contato.html">📞 Contato</a></li>
+    </ul>
 
-    <section class="titulo-galeria">
+</nav>
 
-        <h2>NOSSAS PORÇÕES</h2>
+<section class="titulo-galeria">
 
-        <p>
-            Confira algumas das deliciosas porções preparadas pelo Churrasco do Baiano Sem Miséria.
-        </p>
+    <h2>NOSSAS PORÇÕES</h2>
 
-    </section>
+    <p>
+        Confira algumas das deliciosas porções preparadas pelo Churrasco do Baiano Sem Miséria.
+    </p>
 
-    <!-- Galeria -->
+</section>
 
-    <section class="galeria">
+<section class="galeria">
 
-        <div class="produto">
-            <img src="img/churrasco-misto.jpg" alt="Churrasco Misto">
-            <h3>Churrasco Misto</h3>
-        </div>
+    <div class="produto">
+        <img src="img/churrasco-misto.jpg" alt="Churrasco Misto">
+        <h3>Churrasco Misto</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/contra-file.jpg" alt="Contra Filé">
-            <h3>Contra Filé</h3>
-        </div>
+    <div class="produto">
+        <img src="img/contra-file.jpg" alt="Contra Filé">
+        <h3>Contra Filé</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/costelinha.jpg" alt="Costelinha">
-            <h3>Costelinha</h3>
-        </div>
+    <div class="produto">
+        <img src="img/costelinha.jpg" alt="Costelinha">
+        <h3>Costelinha</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/baiao.jpg" alt="Baião de Dois">
-            <h3>Baião de Dois</h3>
-        </div>
+    <div class="produto">
+        <img src="img/baiao.jpg" alt="Baião de Dois">
+        <h3>Baião de Dois</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/arroz-brocolis.jpg" alt="Arroz com Brócolis">
-            <h3>Arroz com Brócolis</h3>
-        </div>
+    <div class="produto">
+        <img src="img/arroz-brocolis.jpg" alt="Arroz com Brócolis">
+        <h3>Arroz com Brócolis</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/batata-frita.jpg" alt="Batata Frita">
-            <h3>Batata Frita</h3>
-        </div>
+    <div class="produto">
+        <img src="img/batata-frita.jpg" alt="Batata Frita">
+        <h3>Batata Frita</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/aipim.jpg" alt="Aipim Frito">
-            <h3>Aipim Frito</h3>
-        </div>
+    <div class="produto">
+        <img src="img/aipim.jpg" alt="Aipim Frito">
+        <h3>Aipim Frito</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/feijao-tropeiro.jpg" alt="Feijão Tropeiro">
-            <h3>Feijão Tropeiro</h3>
-        </div>
+    <div class="produto">
+        <img src="img/feijao-tropeiro.jpg" alt="Feijão Tropeiro">
+        <h3>Feijão Tropeiro</h3>
+    </div>
 
-        <div class="produto">
-            <img src="img/torresmo.jpg" alt="Torresmo">
-            <h3>Torresmo</h3>
-        </div>
+    <div class="produto">
+        <img src="img/torresmo.jpg" alt="Torresmo">
+        <h3>Torresmo</h3>
+    </div>
 
-    </section>
+</section>
 
-    <!-- Rodapé -->
+<footer>
 
-    <footer>
+    <p>&copy; 2026 Churrasco do Baiano Sem Miséria</p>
 
-        <p>&copy; 2026 Churrasco do Baiano Sem Miséria</p>
+    <p>Duque de Caxias - RJ</p>
 
-        <p>Duque de Caxias - RJ</p>
+</footer>
 
-    </footer>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 
