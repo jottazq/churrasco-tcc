@@ -1,0 +1,142 @@
+/* ==========================================
+   FAIXA DE TÍTULO (mini-hero da página)
+========================================== */
+
+.pagina-topo{
+    margin-top:90px;
+    padding:70px 20px;
+    text-align:center;
+    background:
+        linear-gradient(180deg, rgba(13,13,13,.4) 0%, #0d0d0d 100%),
+        linear-gradient(90deg,#700000,#c70000);
+}
+
+.pagina-topo .section-subtitle{
+    margin-bottom:10px;
+}
+
+.pagina-topo .titulo{
+    margin-bottom:16px;
+}
+
+.pagina-topo p{
+    max-width:600px;
+    margin:0 auto 30px;
+    color:#eee;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* ==========================================
+   CONTEÚDO DO CARDÁPIO
+========================================== */
+
+.pagina-cardapio{
+    background:#0d0d0d;
+    padding:70px 0 30px;
+}
+
+.categoria{
+    background:#1b1b1b;
+    border-top:5px solid #ffc107;
+    border-radius:15px;
+    padding:30px 30px 10px;
+    margin-bottom:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.categoria:hover{
+    box-shadow:0 10px 25px rgba(199,0,0,.25);
+}
+
+.categoria h2{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#ffc107;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.9rem;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.categoria h2 i{
+    color:#c70000;
+    font-size:1.4rem;
+}
+
+/* ITENS */
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:16px 0;
+    border-bottom:1px solid #2c2c2c;
+    transition:.3s;
+}
+
+.item:last-child{
+    border-bottom:none;
+}
+
+.item:hover{
+    background:rgba(255,193,7,.06);
+    padding-left:10px;
+}
+
+.item h3{
+    color:#fff;
+    font-size:1.05rem;
+    font-weight:500;
+}
+
+.item span{
+    color:#ffc107;
+    font-size:1.15rem;
+    font-weight:700;
+}
+
+.item p{
+    width:100%;
+    margin-top:8px;
+    color:#bdbdbd;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:768px){
+
+    .pagina-topo{
+        padding:55px 20px;
+    }
+
+    .pagina-cardapio{
+        padding:50px 0 20px;
+    }
+
+    .categoria{
+        padding:25px 20px 10px;
+    }
+
+    .categoria h2{
+        font-size:1.5rem;
+    }
+
+    .item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:4px;
+    }
+
+    .item span{
+        font-size:1rem;
+    }
+}
+
