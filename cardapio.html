@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio - Churrasco do Baiano Sem Miséria</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="stylesheet" href="styles/style-cardapio.css">
+
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <!-- MENU MOBILE (aparece à esquerda só no celular/tablet) -->
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <div class="logo-text">
+
+                <h2>CHURRASCO</h2>
+
+                <span>DO BAIANO SEM MISÉRIA</span>
+
+            </div>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav class="navbar" id="menu">
+
+            <ul>
+
+                <li><a href="index.html"><i class="fas fa-house"></i> Início</a></li>
+
+                <li><a class="active" href="cardapio.html"><i class="fas fa-drumstick-bite"></i> Cardápio</a></li>
+
+                <li><a href="galeria.html"><i class="fas fa-camera"></i> Galeria</a></li>
+
+                <li><a href="sobre-nos.html"><i class="fas fa-user-tie"></i> Sobre Nós</a></li>
+
+                <li><a href="localizacao.html"><i class="fas fa-location-dot"></i> Localização</a></li>
+
+                <li><a href="contato.html"><i class="fas fa-phone"></i> Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+        <!-- REDES SOCIAIS -->
+
+        <div class="social">
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ================= FAIXA DE TÍTULO ================= -->
+
+<section class="pagina-topo">
+
+    <div class="container">
+
+        <span class="section-subtitle">SABOR NA BRASA</span>
+
+        <h1 class="titulo">CARDÁPIO</h1>
+
+        <p>Cortes selecionados, acompanhamentos e bebidas geladas
+        para deixar seu churrasco completo.</p>
+
+        <a href="https://pedido.anota.ai/loja/churrasco-do-baiano-sem-miseria-1?f=msa"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">
+            PEDIR AGORA
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= CARDÁPIO ================= -->
+
+<section class="pagina-cardapio">
+
+    <div class="container">
+
+        <div class="categoria">
+
+            <h2><i class="fas fa-fire"></i> Churrasco para 5 Pessoas</h2>
+
+            <div class="item">
+                <h3>Churrasco Misto</h3>
+                <span>R$ 60,00</span>
+                <p>Queijo, frango, coração, linguiça, costela suína,
+                contra filé. Acompanha molho e farofa.</p>
+            </div>
+
+            <div class="item">
+                <h3>Contra Filé</h3>
+                <span>R$ 23,00</span>
+            </div>
+
+            <div class="item">
+                <h3>Costelinha</h3>
+                <span>R$ 17,00</span>
+            </div>
+
+        </div>
+
+        <div class="categoria">
+
+            <h2><i class="fas fa-bowl-rice"></i> Acompanhamentos (Porção)</h2>
+
+            <div class="item"><h3>Baião de Dois</h3><span>R$ 26,00</span></div>
+            <div class="item"><h3>Arroz com Brócolis</h3><span>R$ 26,00</span></div>
+            <div class="item"><h3>Arroz Branco</h3><span>R$ 20,00</span></div>
+            <div class="item"><h3>Feijão Tropeiro</h3><span>R$ 26,00</span></div>
+            <div class="item"><h3>Batata Frita</h3><span>R$ 26,00</span></div>
+            <div class="item"><h3>Aipim Frito</h3><span>R$ 26,00</span></div>
+
+        </div>
+
+        <div class="categoria">
+
+            <h2><i class="fas fa-drumstick-bite"></i> Meia Porção para 3 Pessoas</h2>
+
+            <div class="item">
+                <h3>Churrasco Misto</h3>
+                <span>R$ 50,00</span>
+                <p>Frango, linguiça, costela suína e contra filé.
+                Acompanha molho e farofa.</p>
+            </div>
+
+            <div class="item"><h3>Batata Frita</h3><span>R$ 19,00</span></div>
+            <div class="item"><h3>Aipim Frito</h3><span>R$ 19,00</span></div>
+            <div class="item"><h3>Feijão Tropeiro</h3><span>R$ 19,00</span></div>
+            <div class="item"><h3>Baião de Dois</h3><span>R$ 19,00</span></div>
+            <div class="item"><h3>Arroz Branco</h3><span>R$ 14,00</span></div>
+            <div class="item"><h3>Arroz com Brócolis</h3><span>R$ 15,00</span></div>
+            <div class="item"><h3>Torresmo</h3><span>R$ 11,00</span></div>
+
+        </div>
+
+        <div class="categoria">
+
+            <h2><i class="fas fa-glass-water"></i> Bebidas</h2>
+
+            <div class="item"><h3>Suco Natural</h3><span>R$ 10,00</span></div>
+            <div class="item"><h3>Água sem gás</h3><span>R$ 2,50</span></div>
+            <div class="item"><h3>Guaravita</h3><span>R$ 2,00</span></div>
+            <div class="item"><h3>H2O</h3><span>R$ 7,00</span></div>
+            <div class="item"><h3>Red Bull</h3><span>R$ 12,00</span></div>
+
+        </div>
+
+        <div class="categoria">
+
+            <h2><i class="fas fa-bottle-water"></i> Refrigerantes</h2>
+
+            <div class="item"><h3>Refrigerante 350ml</h3><span>R$ 6,00</span></div>
+            <div class="item"><h3>Refrigerante 600ml</h3><span>R$ 8,00</span></div>
+            <div class="item"><h3>Coca-Cola 2L</h3><span>R$ 15,00</span></div>
+            <div class="item"><h3>Fanta Uva/Laranja 2L</h3><span>R$ 15,00</span></div>
+            <div class="item"><h3>Guaraná Antarctica 2L</h3><span>R$ 15,00</span></div>
+
+        </div>
+
+        <div class="categoria">
+
+            <h2><i class="fas fa-beer-mug-empty"></i> Cervejas</h2>
+
+            <div class="item"><h3>Brahma 600ml</h3><span>R$ 10,00</span></div>
+            <div class="item"><h3>Antarctica 600ml</h3><span>R$ 10,00</span></div>
+            <div class="item"><h3>Spaten 600ml</h3><span>R$ 12,00</span></div>
+            <div class="item"><h3>Heineken Long neck</h3><span>R$ 10,00</span></div>
+            <div class="item"><h3>Brahma Latão</h3><span>R$ 7,00</span></div>
+            <div class="item"><h3>Antarctica Latão</h3><span>R$ 7,00</span></div>
+            <div class="item"><h3>Chopp de Vinho (Garrafa)</h3><span>R$ 10,00</span></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CHAMADA ================= -->
+
+<section class="call">
+
+    <h2>Ficou com fome?</h2>
+
+    <p>Peça agora e receba o verdadeiro sabor do churrasco na brasa
+    direto na sua casa, ou venha nos visitar!</p>
+
+    <a href="https://wa.me/5521991633808" target="_blank" class="btn btn-primary">
+        <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+    </a>
+
+</section>
+
+<!-- ================= RODAPÉ ================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <p><strong>Churrasco do Baiano Sem Miséria</strong></p>
+
+        <p><i class="fas fa-location-dot"></i> Duque de Caxias - RJ</p>
+
+        <p class="copyright">&copy; 2026 Todos os direitos reservados.</p>
+
+    </div>
+
+</footer>
+
+<script src="scripts/script.js"></script>
+
+</body>
+
+</html>
