@@ -4,11 +4,20 @@
 
 .pagina-topo{
     margin-top:90px;
-    padding:70px 20px;
+    padding:80px 20px 60px;
     text-align:center;
+    position:relative;
+    overflow:hidden;
     background:
-        linear-gradient(180deg, rgba(13,13,13,.4) 0%, #0d0d0d 100%),
+        radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(13,13,13,.5) 0%, #0d0d0d 100%),
         linear-gradient(90deg,#700000,#c70000);
+    background-size:22px 22px, 100% 100%, 100% 100%;
+}
+
+.pagina-topo .container{
+    position:relative;
+    z-index:2;
 }
 
 .pagina-topo .section-subtitle{
@@ -28,115 +37,265 @@
 }
 
 /* ==========================================
+   NAVEGAÇÃO RÁPIDA POR CATEGORIA
+========================================== */
+
+.menu-nav{
+    position:sticky;
+    top:90px;
+    z-index:500;
+    background:rgba(13,13,13,.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #262626;
+    padding:14px 0;
+}
+
+.menu-nav .container{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.menu-nav .container::-webkit-scrollbar{
+    display:none;
+}
+
+.menu-nav a{
+    flex-shrink:0;
+    padding:9px 20px;
+    border-radius:30px;
+    border:1px solid #333;
+    color:#ccc;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.3px;
+    white-space:nowrap;
+    transition:.3s;
+}
+
+.menu-nav a:hover{
+    border-color:#ffc107;
+    color:#ffc107;
+}
+
+.menu-nav a:active,
+.menu-nav a:focus{
+    background:#c70000;
+    border-color:#c70000;
+    color:#fff;
+}
+
+/* ==========================================
    CONTEÚDO DO CARDÁPIO
 ========================================== */
 
 .pagina-cardapio{
     background:#0d0d0d;
-    padding:70px 0 30px;
+    padding:60px 0 30px;
+}
+
+.cardapio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(440px, 1fr));
+    gap:30px;
+    align-items:start;
 }
 
 .categoria{
-    background:#1b1b1b;
-    border-top:5px solid #ffc107;
-    border-radius:15px;
-    padding:30px 30px 10px;
-    margin-bottom:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
-    transition:.3s;
+    background:#161616;
+    border:1px solid #232323;
+    border-radius:18px;
+    padding:30px 28px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    scroll-margin-top:170px;
 }
 
-.categoria:hover{
-    box-shadow:0 10px 25px rgba(199,0,0,.25);
-}
+/* CABEÇALHO DA CATEGORIA */
 
-.categoria h2{
+.categoria-header{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:16px;
+    margin-bottom:24px;
+    padding-bottom:18px;
+    border-bottom:1px solid #262626;
+}
+
+.icon-badge{
+    width:52px;
+    height:52px;
+    flex-shrink:0;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
     color:#ffc107;
+    background:linear-gradient(135deg,#c70000,#6e0000);
+    box-shadow:0 6px 16px rgba(199,0,0,.45);
+}
+
+.categoria-header h2{
     font-family:'Bebas Neue',sans-serif;
-    font-size:1.9rem;
+    font-size:1.7rem;
     letter-spacing:2px;
-    margin-bottom:10px;
+    color:#fff;
 }
 
-.categoria h2 i{
-    color:#c70000;
-    font-size:1.4rem;
+.categoria-header .count{
+    margin-left:auto;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.5px;
+    color:#999;
+    border:1px solid #333;
+    padding:5px 12px;
+    border-radius:20px;
+    white-space:nowrap;
 }
 
-/* ITENS */
+/* GRID DE ITENS */
+
+.items-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+    gap:14px;
+}
 
 .item{
+    background:#1c1c1c;
+    border:1px solid #2a2a2a;
+    border-radius:12px;
+    padding:16px 18px;
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:16px 0;
-    border-bottom:1px solid #2c2c2c;
+    flex-direction:column;
+    gap:6px;
     transition:.3s;
-}
-
-.item:last-child{
-    border-bottom:none;
 }
 
 .item:hover{
-    background:rgba(255,193,7,.06);
-    padding-left:10px;
+    border-color:#ffc107;
+    transform:translateY(-4px);
+    box-shadow:0 10px 22px rgba(0,0,0,.45);
+}
+
+.item-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
 }
 
 .item h3{
     color:#fff;
-    font-size:1.05rem;
+    font-size:1rem;
     font-weight:500;
+    line-height:1.3;
 }
 
-.item span{
+.item .preco{
     color:#ffc107;
-    font-size:1.15rem;
     font-weight:700;
+    font-size:1.05rem;
+    white-space:nowrap;
 }
 
 .item p{
-    width:100%;
-    margin-top:8px;
-    color:#bdbdbd;
+    color:#a8a8a8;
+    font-size:13.5px;
     line-height:1.6;
-    font-size:14px;
+}
+
+/* ITEM EM DESTAQUE ("mais pedido") */
+
+.item.destaque{
+    grid-column:1 / -1;
+    position:relative;
+    background:linear-gradient(135deg,#201313,#1a1010);
+    border:1px solid #c70000;
+    padding-top:24px;
+}
+
+.item.destaque::before{
+    content:"MAIS PEDIDO";
+    position:absolute;
+    top:-11px;
+    left:18px;
+    background:#ffc107;
+    color:#111;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.5px;
+    padding:4px 12px;
+    border-radius:20px;
+}
+
+.item.destaque h3{
+    font-size:1.15rem;
+    font-weight:600;
+}
+
+.item.destaque .preco{
+    font-size:1.2rem;
 }
 
 /* ==========================================
    RESPONSIVIDADE
 ========================================== */
 
-@media(max-width:768px){
+@media(max-width:1150px){
 
-    .pagina-topo{
-        padding:55px 20px;
-    }
-
-    .pagina-cardapio{
-        padding:50px 0 20px;
-    }
-
-    .categoria{
-        padding:25px 20px 10px;
-    }
-
-    .categoria h2{
-        font-size:1.5rem;
-    }
-
-    .item{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:4px;
-    }
-
-    .item span{
-        font-size:1rem;
+    .cardapio-grid{
+        grid-template-columns:1fr;
     }
 }
 
+@media(max-width:768px){
+
+    .pagina-topo{
+        padding:60px 20px 45px;
+        margin-top:75px;
+    }
+
+    .menu-nav{
+        top:75px;
+    }
+
+    .pagina-cardapio{
+        padding:45px 0 20px;
+    }
+
+    .categoria{
+        padding:24px 18px;
+    }
+
+    .categoria-header h2{
+        font-size:1.35rem;
+    }
+
+    .icon-badge{
+        width:44px;
+        height:44px;
+        font-size:17px;
+    }
+
+    .items-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .item.destaque{
+        grid-column:1 / -1;
+    }
+}
+
+@media(max-width:480px){
+
+    .items-grid{
+        grid-template-columns:1fr;
+    }
+
+    .categoria-header .count{
+        display:none;
+    }
+}
