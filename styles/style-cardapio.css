@@ -4,20 +4,63 @@
 
 .pagina-topo{
     margin-top:90px;
-    padding:80px 20px 60px;
+    padding:90px 20px 70px;
     text-align:center;
     position:relative;
     overflow:hidden;
-    background:
-        radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(13,13,13,.5) 0%, #0d0d0d 100%),
-        linear-gradient(90deg,#700000,#c70000);
-    background-size:22px 22px, 100% 100%, 100% 100%;
 }
 
-.pagina-topo .container{
+.topo-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
+}
+
+.topo-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+        linear-gradient(180deg, rgba(13,13,13,.55) 0%, rgba(13,13,13,.85) 60%, #0d0d0d 100%),
+        linear-gradient(90deg, rgba(199,0,0,.55), rgba(13,13,13,.55));
+}
+
+.topo-content{
     position:relative;
     z-index:2;
+}
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+    font-size:13px;
+    color:#bbb;
+}
+
+.breadcrumb a{
+    color:#ccc;
+    transition:.3s;
+}
+
+.breadcrumb a:hover{
+    color:#ffc107;
+}
+
+.breadcrumb i{
+    font-size:10px;
+    color:#666;
+}
+
+.breadcrumb span{
+    color:#ffc107;
+    font-weight:600;
 }
 
 .pagina-topo .section-subtitle{
@@ -30,10 +73,35 @@
 
 .pagina-topo p{
     max-width:600px;
-    margin:0 auto 30px;
+    margin:0 auto 26px;
     color:#eee;
     line-height:1.8;
     font-size:16px;
+}
+
+.topo-badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:32px;
+}
+
+.topo-badges span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    font-size:13px;
+    color:#eee;
+    backdrop-filter:blur(4px);
+}
+
+.topo-badges i{
+    color:#ffc107;
 }
 
 /* ==========================================
@@ -212,9 +280,12 @@
 .item.destaque{
     grid-column:1 / -1;
     position:relative;
+    display:flex;
+    gap:20px;
+    align-items:stretch;
     background:linear-gradient(135deg,#201313,#1a1010);
     border:1px solid #c70000;
-    padding-top:24px;
+    padding:18px;
 }
 
 .item.destaque::before{
@@ -229,6 +300,23 @@
     letter-spacing:.5px;
     padding:4px 12px;
     border-radius:20px;
+    z-index:2;
+}
+
+.item-img{
+    width:130px;
+    height:130px;
+    flex-shrink:0;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+}
+
+.item-body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
 }
 
 .item.destaque h3{
@@ -238,6 +326,28 @@
 
 .item.destaque .preco{
     font-size:1.2rem;
+}
+
+/* NOTA FINAL */
+
+.observacao{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+    padding:16px 20px;
+    background:#161616;
+    border:1px dashed #333;
+    border-radius:12px;
+    color:#999;
+    font-size:13.5px;
+    line-height:1.6;
+}
+
+.observacao i{
+    color:#ffc107;
+    font-size:16px;
+    flex-shrink:0;
 }
 
 /* ==========================================
@@ -254,12 +364,21 @@
 @media(max-width:768px){
 
     .pagina-topo{
-        padding:60px 20px 45px;
+        padding:70px 20px 50px;
         margin-top:75px;
     }
 
     .menu-nav{
         top:75px;
+    }
+
+    .breadcrumb{
+        font-size:12px;
+    }
+
+    .topo-badges span{
+        font-size:12px;
+        padding:7px 14px;
     }
 
     .pagina-cardapio{
@@ -286,6 +405,12 @@
 
     .item.destaque{
         grid-column:1 / -1;
+        flex-direction:column;
+    }
+
+    .item-img{
+        width:100%;
+        height:160px;
     }
 }
 
