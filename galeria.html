@@ -2,110 +2,258 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Galeria - Churrasco do Baiano Sem Miséria</title>
+
+    <link rel="stylesheet" href="styles/style.css">
 
     <link rel="stylesheet" href="styles/style-galeria.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
-<header>
+<!-- ================= NAVBAR ================= -->
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+<header class="header">
+
+    <div class="container">
+
+        <!-- MENU MOBILE (aparece à esquerda só no celular/tablet) -->
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <div class="logo-text">
+
+                <h2>CHURRASCO</h2>
+
+                <span>DO BAIANO SEM MISÉRIA</span>
+
+            </div>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav class="navbar" id="menu">
+
+            <ul>
+
+                <li><a href="index.html"><i class="fas fa-house"></i> Início</a></li>
+
+                <li><a href="cardapio.html"><i class="fas fa-drumstick-bite"></i> Cardápio</a></li>
+
+                <li><a class="active" href="galeria.html"><i class="fas fa-camera"></i> Galeria</a></li>
+
+                <li><a href="sobre-nos.html"><i class="fas fa-user-tie"></i> Sobre Nós</a></li>
+
+                <li><a href="localizacao.html"><i class="fas fa-location-dot"></i> Localização</a></li>
+
+                <li><a href="contato.html"><i class="fas fa-phone"></i> Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+        <!-- REDES SOCIAIS -->
+
+        <div class="social">
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+
+    </div>
 
 </header>
 
-<nav class="sidebar" id="menu">
+<!-- ================= FAIXA DE TÍTULO ================= -->
 
-    <h2>MENU</h2>
+<section class="pagina-topo">
 
-    <ul>
-        <li><a href="index.html">🏠 Início</a></li>
-        <li><a href="cardapio.html">🍖 Cardápio</a></li>
-        <li><a href="galeria.html">📸 Galeria</a></li>
-        <li><a href="sobre-nos.html">👨‍🍳 Sobre Nós</a></li>
-        <li><a href="localizacao.html">📍 Localização</a></li>
-        <li><a href="contato.html">📞 Contato</a></li>
-    </ul>
+    <div class="topo-overlay"></div>
 
-</nav>
+    <img src="img/churrasco-misto.jpg" alt="Pratos do Churrasco do Baiano" class="topo-bg">
 
-<section class="titulo-galeria">
+    <div class="container topo-content">
 
-    <h2>NOSSAS PORÇÕES</h2>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Galeria</span>
+        </div>
 
-    <p>
-        Confira algumas das deliciosas porções preparadas pelo Churrasco do Baiano Sem Miséria.
-    </p>
+        <span class="section-subtitle">CLIQUE E AMPLIE</span>
 
-</section>
+        <h1 class="titulo">GALERIA</h1>
 
-<section class="galeria">
+        <p>Confira algumas das deliciosas porções preparadas pelo
+        Churrasco do Baiano Sem Miséria.</p>
 
-    <div class="produto">
-        <img src="img/churrasco-misto.jpg" alt="Churrasco Misto">
-        <h3>Churrasco Misto</h3>
-    </div>
+        <div class="topo-badges">
+            <span><i class="fas fa-camera-retro"></i> Fotos reais</span>
+            <span><i class="fas fa-drumstick-bite"></i> Pratos autênticos</span>
+            <span><i class="fas fa-star"></i> Feito na hora</span>
+        </div>
 
-    <div class="produto">
-        <img src="img/contra-file.jpg" alt="Contra Filé">
-        <h3>Contra Filé</h3>
-    </div>
-
-    <div class="produto">
-        <img src="img/costelinha.jpg" alt="Costelinha">
-        <h3>Costelinha</h3>
-    </div>
-
-    <div class="produto">
-        <img src="img/baiao.jpg" alt="Baião de Dois">
-        <h3>Baião de Dois</h3>
-    </div>
-
-    <div class="produto">
-        <img src="img/arroz-brocolis.jpg" alt="Arroz com Brócolis">
-        <h3>Arroz com Brócolis</h3>
-    </div>
-
-    <div class="produto">
-        <img src="img/batata-frita.jpg" alt="Batata Frita">
-        <h3>Batata Frita</h3>
-    </div>
-
-    <div class="produto">
-        <img src="img/aipim.jpg" alt="Aipim Frito">
-        <h3>Aipim Frito</h3>
-    </div>
-
-    <div class="produto">
-        <img src="img/feijao-tropeiro.jpg" alt="Feijão Tropeiro">
-        <h3>Feijão Tropeiro</h3>
-    </div>
-
-    <div class="produto">
-        <img src="img/torresmo.jpg" alt="Torresmo">
-        <h3>Torresmo</h3>
     </div>
 
 </section>
+
+<!-- ================= GALERIA ================= -->
+
+<section class="pagina-galeria">
+
+    <div class="container">
+
+        <div class="galeria">
+
+            <div class="produto">
+                <img src="img/churrasco-misto.jpg" alt="Churrasco Misto">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Churrasco Misto</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/contra-file.jpg" alt="Contra Filé">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Contra Filé</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/costelinha.jpg" alt="Costelinha">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Costelinha</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/baiao.jpg" alt="Baião de Dois">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Baião de Dois</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/arroz-brocolis.jpg" alt="Arroz com Brócolis">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Arroz com Brócolis</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/batata-frita.jpg" alt="Batata Frita">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Batata Frita</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/aipim.jpg" alt="Aipim Frito">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Aipim Frito</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/feijao-tropeiro.jpg" alt="Feijão Tropeiro">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Feijão Tropeiro</h3>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img src="img/torresmo.jpg" alt="Torresmo">
+                <div class="produto-overlay">
+                    <i class="fas fa-expand"></i>
+                    <h3>Torresmo</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CHAMADA ================= -->
+
+<section class="call">
+
+    <h2>Bateu a Vontade?</h2>
+
+    <p>Peça agora e receba o verdadeiro sabor do churrasco na brasa
+    direto na sua casa, ou venha nos visitar!</p>
+
+    <a href="cardapio.html" class="btn btn-primary">VER CARDÁPIO</a>
+
+</section>
+
+<!-- ================= RODAPÉ ================= -->
 
 <footer>
 
-    <p>&copy; 2026 Churrasco do Baiano Sem Miséria</p>
+    <div class="container footer-content">
 
-    <p>Duque de Caxias - RJ</p>
+        <p><strong>Churrasco do Baiano Sem Miséria</strong></p>
+
+        <p><i class="fas fa-location-dot"></i> Duque de Caxias - RJ</p>
+
+        <p class="copyright">&copy; 2026 Todos os direitos reservados.</p>
+
+    </div>
 
 </footer>
 
-<script>
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
-}
-</script>
+<!-- ================= LIGHTBOX ================= -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-close" id="lightboxClose"><i class="fas fa-xmark"></i></button>
+
+    <button class="arrow lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+
+    <figure class="lightbox-figure">
+        <img src="" alt="" id="lightboxImg">
+        <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+
+    <button class="arrow lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+
+</div>
+
+<script src="scripts/script.js"></script>
 
 </body>
 
