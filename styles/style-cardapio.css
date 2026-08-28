@@ -8,6 +8,7 @@
     text-align:center;
     position:relative;
     overflow:hidden;
+    border-radius:0 0 40px 40px;
 }
 
 .topo-bg{
@@ -110,11 +111,8 @@
 
 .menu-nav{
     position:sticky;
-    top:90px;
+    top:100px;
     z-index:500;
-    background:rgba(13,13,13,.94);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid #262626;
     padding:14px 0;
 }
 
@@ -123,6 +121,12 @@
     gap:10px;
     overflow-x:auto;
     scrollbar-width:none;
+    background:rgba(20,20,20,.85);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:40px;
+    padding:10px 14px;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
 }
 
 .menu-nav .container::-webkit-scrollbar{
@@ -133,25 +137,28 @@
     flex-shrink:0;
     padding:9px 20px;
     border-radius:30px;
-    border:1px solid #333;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.03);
     color:#ccc;
     font-size:13px;
     font-weight:600;
     letter-spacing:.3px;
     white-space:nowrap;
-    transition:.3s;
+    transition:.35s cubic-bezier(.25,.8,.25,1);
 }
 
 .menu-nav a:hover{
-    border-color:#ffc107;
+    border-color:rgba(255,193,7,.5);
     color:#ffc107;
+    background:rgba(255,193,7,.08);
 }
 
 .menu-nav a:active,
-.menu-nav a:focus{
-    background:#c70000;
-    border-color:#c70000;
+.menu-nav a.active{
+    background:linear-gradient(45deg,#c70000,#ff2b2b);
+    border-color:transparent;
     color:#fff;
+    box-shadow:0 6px 16px rgba(199,0,0,.4);
 }
 
 /* ==========================================
@@ -171,12 +178,18 @@
 }
 
 .categoria{
-    background:#161616;
-    border:1px solid #232323;
-    border-radius:18px;
-    padding:30px 28px;
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    background:linear-gradient(160deg,#181818,#131313);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:26px;
+    padding:32px 30px;
+    box-shadow:0 18px 40px rgba(0,0,0,.3);
     scroll-margin-top:170px;
+    transition:.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.categoria:hover{
+    box-shadow:0 22px 48px rgba(0,0,0,.4);
+    border-color:rgba(255,193,7,.15);
 }
 
 /* CABEÇALHO DA CATEGORIA */
@@ -191,8 +204,8 @@
 }
 
 .icon-badge{
-    width:52px;
-    height:52px;
+    width:54px;
+    height:54px;
     flex-shrink:0;
     border-radius:50%;
     display:flex;
@@ -201,7 +214,7 @@
     font-size:20px;
     color:#ffc107;
     background:linear-gradient(135deg,#c70000,#6e0000);
-    box-shadow:0 6px 16px rgba(199,0,0,.45);
+    box-shadow:0 6px 16px rgba(199,0,0,.4), 0 0 0 5px rgba(255,193,7,.06);
 }
 
 .categoria-header h2{
@@ -232,20 +245,20 @@
 }
 
 .item{
-    background:#1c1c1c;
-    border:1px solid #2a2a2a;
-    border-radius:12px;
-    padding:16px 18px;
+    background:linear-gradient(160deg,#1e1e1e,#191919);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:18px;
+    padding:17px 19px;
     display:flex;
     flex-direction:column;
     gap:6px;
-    transition:.3s;
+    transition:.35s cubic-bezier(.25,.8,.25,1);
 }
 
 .item:hover{
-    border-color:#ffc107;
+    border-color:rgba(255,193,7,.35);
     transform:translateY(-4px);
-    box-shadow:0 10px 22px rgba(0,0,0,.45);
+    box-shadow:0 14px 28px rgba(0,0,0,.4);
 }
 
 .item-header{
@@ -284,15 +297,17 @@
     gap:20px;
     align-items:stretch;
     background:linear-gradient(135deg,#201313,#1a1010);
-    border:1px solid #c70000;
-    padding:18px;
+    border:1px solid rgba(199,0,0,.4);
+    border-radius:22px;
+    padding:20px;
+    box-shadow:0 14px 32px rgba(199,0,0,.12);
 }
 
 .item.destaque::before{
     content:"MAIS PEDIDO";
     position:absolute;
     top:-11px;
-    left:18px;
+    left:22px;
     background:#ffc107;
     color:#111;
     font-size:10.5px;
@@ -308,7 +323,7 @@
     height:130px;
     flex-shrink:0;
     object-fit:cover;
-    border-radius:12px;
+    border-radius:16px;
     box-shadow:0 8px 20px rgba(0,0,0,.5);
 }
 
@@ -338,7 +353,7 @@
     padding:16px 20px;
     background:#161616;
     border:1px dashed #333;
-    border-radius:12px;
+    border-radius:16px;
     color:#999;
     font-size:13.5px;
     line-height:1.6;
@@ -369,7 +384,11 @@
     }
 
     .menu-nav{
-        top:75px;
+        top:82px;
+    }
+
+    .menu-nav .container{
+        border-radius:24px;
     }
 
     .breadcrumb{
