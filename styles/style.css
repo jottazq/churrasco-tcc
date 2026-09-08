@@ -197,6 +197,13 @@ ul{
 }
 
 @media(max-width:1000px){
+   .logo{
+    order: 1;
+}
+
+.menu-btn{
+    order: 2;
+}
 
     .navbar{
         position:fixed;
