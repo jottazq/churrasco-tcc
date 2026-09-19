@@ -448,39 +448,41 @@
 .lightbox .arrow{
     position:fixed;
     top:50%;
+    bottom:auto;
     transform:translateY(-50%);
     width:56px;
     height:56px;
-    margin:0;
+    padding:0;
     display:flex;
     align-items:center;
     justify-content:center;
     border-radius:50%;
     border:1px solid rgba(255,255,255,.2);
-    background:rgba(0,0,0,.55);
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(6px);
     color:#fff;
     font-size:20px;
     cursor:pointer;
     z-index:10001;
-    transition:.3s;
+    transition:background .3s, color .3s;
 }
 
 .lightbox .arrow:hover{
     background:#c70000;
     border-color:transparent;
     color:#ffc107;
+    transform:translateY(-50%);
 }
 
-.lightbox-prev{
+.lightbox .lightbox-prev{
     left:24px;
     right:auto;
 }
 
-.lightbox-next{
+.lightbox .lightbox-next{
     right:24px;
     left:auto;
 }
-
 /* imagem centralizada, sem ficar por baixo das setas */
 .lightbox-figure{
     max-width:calc(100vw - 180px);
@@ -511,6 +513,18 @@
 
     .lightbox-prev{ left:10px; }
     .lightbox-next{ right:10px; }
+
+    .lightbox-figure{
+        max-width:calc(100vw - 110px);
+    }
+   .lightbox .arrow{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    .lightbox .lightbox-prev{ left:10px; }
+    .lightbox .lightbox-next{ right:10px; }
 
     .lightbox-figure{
         max-width:calc(100vw - 110px);
