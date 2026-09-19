@@ -443,3 +443,76 @@
         display:none;
     }
 }
+/* ===== SETAS DO LIGHTBOX (fixas nas laterais da tela) ===== */
+
+.lightbox .arrow{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    width:56px;
+    height:56px;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(0,0,0,.55);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    z-index:10001;
+    transition:.3s;
+}
+
+.lightbox .arrow:hover{
+    background:#c70000;
+    border-color:transparent;
+    color:#ffc107;
+}
+
+.lightbox-prev{
+    left:24px;
+    right:auto;
+}
+
+.lightbox-next{
+    right:24px;
+    left:auto;
+}
+
+/* imagem centralizada, sem ficar por baixo das setas */
+.lightbox-figure{
+    max-width:calc(100vw - 180px);
+    margin:0 auto;
+}
+
+.lightbox-figure img{
+    max-width:100%;
+    max-height:80vh;
+    object-fit:contain;
+}
+
+/* botão fechar sempre no canto superior direito */
+.lightbox-close{
+    position:fixed;
+    top:20px;
+    right:24px;
+    z-index:10002;
+}
+
+@media(max-width:768px){
+
+    .lightbox .arrow{
+        width:44px;
+        height:44px;
+        font-size:16px;
+    }
+
+    .lightbox-prev{ left:10px; }
+    .lightbox-next{ right:10px; }
+
+    .lightbox-figure{
+        max-width:calc(100vw - 110px);
+    }
+}
