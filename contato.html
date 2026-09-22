@@ -4,13 +4,21 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contato - Churrasco do Baiano Sem Miséria</title>
 
+    <link rel="stylesheet" href="styles/style.css">
+
     <link rel="stylesheet" href="styles/style-contato.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -18,137 +26,193 @@
 
 <body>
 
-<header>
+<!-- ================= NAVBAR ================= -->
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+<header class="header">
+
+    <div class="container">
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="logo">
+
+            <div class="logo-text">
+
+                <h2>CHURRASCO</h2>
+
+                <span>DO BAIANO SEM MISÉRIA</span>
+
+            </div>
+
+        </div>
+
+        <nav class="navbar" id="menu">
+
+            <ul>
+
+                <li><a href="index.html"><i class="fas fa-house"></i> Início</a></li>
+
+                <li><a href="cardapio.html"><i class="fas fa-drumstick-bite"></i> Cardápio</a></li>
+
+                <li><a href="galeria.html"><i class="fas fa-camera"></i> Galeria</a></li>
+
+                <li><a href="sobre-nos.html"><i class="fas fa-user-tie"></i> Sobre Nós</a></li>
+
+                <li><a href="localizacao.html"><i class="fas fa-location-dot"></i> Localização</a></li>
+
+                <li><a class="active" href="contato.html"><i class="fas fa-phone"></i> Contato</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="social">
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+        </div>
+
+    </div>
 
 </header>
 
-<nav class="sidebar" id="menu">
+<!-- ================= FAIXA DE TÍTULO ================= -->
 
-    <h2>MENU</h2>
+<section class="pagina-topo">
 
-    <ul>
-        <li><a href="index.html">🏠 Início</a></li>
-        <li><a href="cardapio.html">🍖 Cardápio</a></li>
-        <li><a href="galeria.html">📸 Galeria</a></li>
-        <li><a href="sobre-nos.html">👨‍🍳 Sobre Nós</a></li>
-        <li><a href="localizacao.html">📍 Localização</a></li>
-        <li><a href="contato.html">📞 Contato</a></li>
-    </ul>
+    <div class="topo-overlay"></div>
 
-</nav>
+    <img src="img/fachada.jpg" alt="Fachada Churrasco do Baiano" class="topo-bg">
 
-<section class="banner">
+    <div class="container topo-content">
 
-    <h2>FALE CONOSCO</h2>
+        <div class="breadcrumb">
+            <a href="index.html">Início</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Contato</span>
+        </div>
 
-    <p>
-        Faça seu pedido ou tire suas dúvidas.
-    </p>
+        <span class="section-subtitle">ESTAMOS À DISPOSIÇÃO</span>
 
-</section>
+        <h1 class="titulo">FALE CONOSCO</h1>
 
-<section class="contato-container">
+        <p>Faça seu pedido ou tire suas dúvidas com a gente.</p>
 
-    <div class="card-contato">
-
-        <h3>📱 WhatsApp</h3>
-
-        <p>
-            Faça seu pedido de forma rápida.
-        </p>
-
-        <a href="#" class="botao">
-            Chamar no WhatsApp
-        </a>
-
-    </div>
-
-    <div class="card-contato">
-
-        <h3>📸 Instagram</h3>
-
-        <p>
-            Veja nossas novidades e promoções.
-        </p>
-
-        <a href="#" class="botao">
-            Acessar Instagram
-        </a>
-
-    </div>
-
-    <div class="card-contato">
-
-        <h3>🕒 Funcionamento</h3>
-
-        <p>
-            Segunda a Domingo<br>
-            11:00 às 23:00
-        </p>
+        <div class="topo-badges">
+            <span><i class="fas fa-bolt"></i> Resposta rápida</span>
+            <span><i class="fas fa-headset"></i> Atendimento humanizado</span>
+        </div>
 
     </div>
 
 </section>
 
-<section class="formulario">
+<!-- ================= CANAIS DE CONTATO ================= -->
 
-    <h2>Envie uma mensagem</h2>
+<section class="pagina-contato">
 
-    <form id="form-contato">
+    <div class="container">
 
-        <input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Seu nome"
-            required
-        >
+        <div class="contato-grid">
 
-        <input
-            type="tel"
-            id="telefone"
-            name="telefone"
-            placeholder="Seu telefone"
-            required
-        >
+            <div class="contato-card">
+                <div class="icon-badge"><i class="fab fa-whatsapp"></i></div>
+                <h3>WhatsApp</h3>
+                <p>Faça seu pedido de forma rápida.</p>
+                <a href="#" class="btn btn-primary">Chamar no WhatsApp</a>
+            </div>
 
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Seu e-mail"
-            required
-        >
+            <div class="contato-card">
+                <div class="icon-badge"><i class="fab fa-instagram"></i></div>
+                <h3>Instagram</h3>
+                <p>Veja nossas novidades e promoções.</p>
+                <a href="#" class="btn btn-primary">Acessar Instagram</a>
+            </div>
 
-        <textarea
-            id="mensagem"
-            name="mensagem"
-            placeholder="Digite sua mensagem"
-            required></textarea>
+            <div class="contato-card">
+                <div class="icon-badge"><i class="fas fa-clock"></i></div>
+                <h3>Funcionamento</h3>
+                <p>Segunda a Domingo<br>11:00 às 23:00</p>
+            </div>
 
-        <button type="submit">
-            Enviar mensagem
-        </button>
+        </div>
 
-    </form>
+        <!-- ================= FORMULÁRIO ================= -->
+
+        <div class="formulario-card">
+
+            <div class="categoria-header">
+                <div class="icon-badge"><i class="fas fa-envelope"></i></div>
+                <h2>Envie uma mensagem</h2>
+            </div>
+
+            <form id="form-contato">
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Seu nome"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="Seu telefone"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Seu e-mail"
+                    required
+                >
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Digite sua mensagem"
+                    required></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    Enviar mensagem
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </section>
+
+<!-- ================= RODAPÉ ================= -->
 
 <footer>
 
-    <p>© 2026 Churrasco do Baiano Sem Miséria</p>
+    <div class="container footer-content">
 
-    <p>Duque de Caxias - RJ</p>
+        <p><strong>Churrasco do Baiano Sem Miséria</strong></p>
+
+        <p><i class="fas fa-location-dot"></i> Duque de Caxias - RJ</p>
+
+        <p class="copyright">&copy; 2026 Todos os direitos reservados.</p>
+
+    </div>
 
 </footer>
 
-<script>
-function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-}
-</script>
+<script src="scripts/script.js"></script>
 
 <script src="scripts/script-contato.js"></script>
 
