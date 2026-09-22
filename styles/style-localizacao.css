@@ -176,12 +176,29 @@
 
 .horario-lista li{
     display:flex;
-    justify-content:space-between;
-    gap:10px;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
     padding-bottom:8px;
+    text-align:center;
     border-bottom:1px solid #262626;
     font-size:14px;
     color:#e0e0e0;
+}
+
+.horario-lista li span{
+    flex:0 0 auto;
+}
+
+.horario-lista li span:first-child{
+    width:90px;
+    text-align:right;
+}
+
+.horario-lista li span:last-child{
+    width:110px;
+    text-align:left;
+}
 }
 
 .horario-lista li:last-child{
