@@ -1,297 +1,365 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ==========================================
+   FAIXA DE TÍTULO (mesma linguagem das outras páginas)
+========================================== */
 
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+.pagina-topo{
+    margin-top:90px;
+    padding:90px 20px 70px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:0 0 40px 40px;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(180deg,#8b0000 0%,#a30000 50%,#7a0000 100%);
-    color:#fff;
-    min-height:100vh;
-    overflow-x:hidden;
-}
-
-/* =========================
-   CABEÇALHO
-========================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
+.topo-bg{
+    position:absolute;
+    inset:0;
     width:100%;
-    height:70px;
-    background:#111;
-    border-bottom:4px solid #ffc107;
-    display:flex;
-    align-items:center;
-    padding:0 20px;
-    z-index:1000;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
 }
 
-/* =========================
-   BOTÃO MENU
-========================= */
-
-.menu-btn{
-    background:none;
-    border:none;
-    color:#ffc107;
-    font-size:32px;
-    cursor:pointer;
-    transition:.3s;
+.topo-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+        linear-gradient(180deg, rgba(13,13,13,.55) 0%, rgba(13,13,13,.85) 60%, #0d0d0d 100%),
+        linear-gradient(90deg, rgba(199,0,0,.55), rgba(13,13,13,.55));
 }
 
-.menu-btn:hover{
-    transform:scale(1.1);
-    color:#ffdd44;
+.topo-content{
+    position:relative;
+    z-index:2;
 }
 
-/* =========================
-   MENU LATERAL
-========================= */
-
-.sidebar{
-    position:fixed;
-    top:0;
-    left:-280px;
-    width:280px;
-    height:100vh;
-    background:#181818;
-    border-right:4px solid #c70000;
-    transition:.4s ease;
-    z-index:999;
-}
-
-.sidebar.active{
-    left:0;
-}
-
-.sidebar h2{
-    text-align:center;
-    margin-top:30px;
-    margin-bottom:30px;
-    color:#ffc107;
-    font-family:'Bebas Neue',sans-serif;
-    font-size:2rem;
-    letter-spacing:3px;
-}
-
-.sidebar ul{
-    list-style:none;
-}
-
-.sidebar ul li{
-    border-bottom:1px solid #333;
-}
-
-.sidebar ul li a{
-    display:block;
-    padding:18px 25px;
-    color:#fff;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.sidebar ul li a:hover{
-    background:#c70000;
-    padding-left:35px;
-}
-
-/* =========================
-   BANNER
-========================= */
-
-.banner{
-    text-align:center;
-    padding:120px 20px 40px;
-}
-
-.banner h2{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:4rem;
-    color:#ffd700;
-    letter-spacing:4px;
-    text-shadow:0 0 10px #ffcc00,0 0 20px #ff6600;
-}
-
-.banner p{
-    margin-top:10px;
-    font-size:1.2rem;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.informacoes{
-    width:90%;
-    max-width:1000px;
-    margin:30px auto;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
-.card{
-    background:#111;
-    border-top:5px solid #ffd700;
-    border-radius:15px;
-    padding:25px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 20px rgba(255,0,0,.4);
-}
-
-.card h2{
-    color:#ffd700;
-    font-family:'Bebas Neue',sans-serif;
-    font-size:2rem;
-    letter-spacing:2px;
-    margin-bottom:15px;
-}
-
-.card p{
-    color:#ddd;
-    line-height:1.8;
-}
-
-/* =========================
-   MAPA
-========================= */
-
-.mapa{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
-    text-align:center;
-}
-
-.mapa h2{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:2.5rem;
-    color:#ffd700;
-    letter-spacing:2px;
-    margin-bottom:20px;
-}
-
-.mapa iframe{
-    width:100%;
-    height:450px;
-    border:none;
-    border-radius:15px;
-    box-shadow:0 0 20px rgba(0,0,0,.4);
-}
-
-/* =========================
-   BOTÕES
-========================= */
-
-.botoes{
+.breadcrumb{
     display:flex;
     justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin:40px 20px;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+    font-size:13px;
+    color:#bbb;
 }
 
-.btn{
-    display:inline-block;
-    text-decoration:none;
-    background:linear-gradient(45deg,#c70000,#ff0000);
+.breadcrumb a{
+    color:#ccc;
+    transition:.3s;
+}
+
+.breadcrumb a:hover{
+    color:#ffc107;
+}
+
+.breadcrumb i{
+    font-size:10px;
+    color:#666;
+}
+
+.breadcrumb span{
+    color:#ffc107;
+    font-weight:600;
+}
+
+.pagina-topo .section-subtitle{
+    margin-bottom:10px;
+}
+
+.pagina-topo .titulo{
+    margin-bottom:16px;
+}
+
+.pagina-topo p{
+    max-width:600px;
+    margin:0 auto 26px;
+    color:#eee;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.topo-badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.topo-badges span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    font-size:13px;
+    color:#eee;
+    backdrop-filter:blur(4px);
+}
+
+.topo-badges i{
+    color:#ffc107;
+}
+
+/* ==========================================
+   SEÇÃO LOCALIZAÇÃO
+========================================== */
+
+.pagina-localizacao{
+    background:#0d0d0d;
+    padding:70px 0 40px;
+}
+
+.icon-badge{
+    width:54px;
+    height:54px;
+    flex-shrink:0;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    color:#ffc107;
+    background:linear-gradient(135deg,#c70000,#6e0000);
+    box-shadow:0 6px 16px rgba(199,0,0,.4), 0 0 0 5px rgba(255,193,7,.06);
+}
+
+/* ===== CARDS DE INFO ===== */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:24px;
+    margin-bottom:30px;
+}
+
+.info-card{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    background:linear-gradient(160deg,#181818,#131313);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:26px;
+    padding:30px 28px;
+    box-shadow:0 18px 40px rgba(0,0,0,.3);
+    transition:.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.info-card:hover{
+    box-shadow:0 22px 48px rgba(0,0,0,.4);
+    border-color:rgba(255,193,7,.15);
+}
+
+.info-card h2{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.5rem;
+    letter-spacing:1.5px;
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.info-card p{
+    color:#c2c2c2;
+    line-height:1.8;
+    font-size:14.5px;
+}
+
+.horario-lista{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.horario-lista li{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    padding-bottom:8px;
+    border-bottom:1px solid #262626;
+    font-size:14px;
+    color:#e0e0e0;
+}
+
+.horario-lista li:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+}
+
+.horario-lista li span:first-child{
+    color:#999;
+}
+
+.horario-lista .fechado{
+    color:#c70000;
+    font-weight:600;
+}
+
+/* ===== MAPA ===== */
+
+.mapa-card{
+    background:linear-gradient(160deg,#181818,#131313);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:26px;
+    padding:32px 30px;
+    box-shadow:0 18px 40px rgba(0,0,0,.3);
+    margin-bottom:30px;
+}
+
+.mapa-card .categoria-header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:22px;
+    padding-bottom:18px;
+    border-bottom:1px solid #262626;
+}
+
+.mapa-card h2{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.7rem;
+    letter-spacing:2px;
+    color:#fff;
+}
+
+.mapa-wrap{
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 14px 32px rgba(0,0,0,.4);
+}
+
+.mapa-wrap iframe{
+    width:100%;
+    height:420px;
+    border:none;
+    display:block;
+}
+
+/* ===== BOTÕES ===== */
+
+.localizacao-botoes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.localizacao-botoes .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.2);
     color:#fff;
     padding:15px 30px;
     border-radius:10px;
     font-weight:600;
+    text-decoration:none;
     transition:.3s;
 }
 
-.btn:hover{
+.btn-outline:hover{
+    border-color:#ffc107;
+    color:#ffc107;
     transform:translateY(-3px);
-    box-shadow:0 0 15px rgba(255,0,0,.6);
 }
 
-/* =========================
-   RODAPÉ
-========================= */
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
 
-footer{
-    margin-top:50px;
-    background:#111;
-    border-top:4px solid #ffd700;
-    text-align:center;
-    padding:25px;
+@media(max-width:900px){
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
 }
-
-footer p{
-    color:#ddd;
-    margin:5px 0;
-}
-
-/* =========================
-   BARRA DE ROLAGEM
-========================= */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#111;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#c70000;
-    border-radius:10px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#ff0000;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
 
 @media(max-width:768px){
 
-    .sidebar{
-        width:240px;
-        left:-240px;
+    .pagina-topo{
+        padding:70px 20px 50px;
+        margin-top:75px;
     }
 
-    .banner{
-        padding:110px 20px 40px;
+    .breadcrumb{
+        font-size:12px;
     }
 
-    .banner h2{
-        font-size:2.8rem;
+    .topo-badges span{
+        font-size:12px;
+        padding:7px 14px;
     }
 
-    .informacoes{
-        grid-template-columns:1fr;
+    .pagina-localizacao{
+        padding:45px 0 25px;
     }
 
-    .mapa iframe{
-        height:300px;
+    .icon-badge{
+        width:44px;
+        height:44px;
+        font-size:17px;
     }
 
-    .btn{
-        width:90%;
+    .info-card{
+        flex-direction:column;
+        gap:14px;
+        padding:22px 20px;
+        border-radius:20px;
+    }
+
+    .info-card h2{
+        font-size:1.3rem;
+    }
+
+    .info-card p{
+        font-size:14px;
+    }
+
+    .mapa-card{
+        padding:22px 18px;
+        border-radius:20px;
+    }
+
+    .mapa-card h2{
+        font-size:1.35rem;
+    }
+
+    .mapa-wrap iframe{
+        height:280px;
+    }
+
+    .localizacao-botoes{
+        flex-direction:column;
+    }
+
+    .localizacao-botoes .btn{
+        width:100%;
+        justify-content:center;
         text-align:center;
+    }
+}
+
+@media(max-width:480px){
+
+    .pagina-topo .titulo{
+        font-size:2.3rem;
+    }
+
+    .icon-badge{
+        width:40px;
+        height:40px;
+        font-size:15px;
+    }
+
+    .info-card,
+    .mapa-card{
+        padding:18px 16px;
     }
 }
