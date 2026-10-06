@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumo - Terminal Linux</title>
+    <title>Resumo - Linux, PHP e Banco de Dados</title>
 </head>
 
 <body>
 
-    <h1>🐧 Terminal Linux — Resumo</h1>
+    <h1>📚 Resumo — Linux, PHP e Banco de Dados</h1>
 
-    <h2>📁 Navegação</h2>
+    <!-- ================= LINUX ================= -->
+
+    <h2>🐧 Terminal Linux</h2>
+
+    <h3>📁 Navegação</h3>
+
     <ul>
         <li><code>pwd</code> → mostra onde você está.</li>
         <li><code>ls</code> → lista arquivos e pastas.</li>
@@ -19,7 +25,9 @@
         <li><code>clear</code> → limpa o terminal.</li>
     </ul>
 
-    <h2>📄 Arquivos e pastas</h2>
+
+    <h3>📄 Arquivos e Pastas</h3>
+
     <ul>
         <li><code>mkdir</code> → cria uma pasta.</li>
         <li><code>touch</code> → cria um arquivo.</li>
@@ -32,7 +40,9 @@
         <li><code>man</code> → mostra o manual de um comando.</li>
     </ul>
 
-    <h2>🔐 Permissões</h2>
+
+    <h3>🔐 Permissões</h3>
+
     <ul>
         <li><code>r</code> → leitura = <strong>4</strong></li>
         <li><code>w</code> → escrita = <strong>2</strong></li>
@@ -42,7 +52,9 @@
         <li><code>chgrp</code> → altera o grupo.</li>
     </ul>
 
-    <h2>📊 Valores das permissões</h2>
+
+    <h3>📊 Valores das Permissões</h3>
+
     <ul>
         <li><code>7</code> → <code>rwx</code> → lê, escreve e executa.</li>
         <li><code>6</code> → <code>rw-</code> → lê e escreve.</li>
@@ -51,14 +63,18 @@
         <li><code>0</code> → <code>---</code> → nenhuma permissão.</li>
     </ul>
 
-    <h2>👤 Usuários</h2>
+
+    <h3>👤 Usuários</h3>
+
     <ul>
         <li><code>whoami</code> → mostra o usuário atual.</li>
         <li><code>id</code> → mostra informações do usuário e seus grupos.</li>
         <li><code>sudo</code> → executa um comando como administrador.</li>
     </ul>
 
-    <h2>📦 Programas</h2>
+
+    <h3>📦 Programas</h3>
+
     <ul>
         <li><code>sudo apt update</code> → atualiza a lista de pacotes.</li>
         <li><code>sudo apt upgrade</code> → atualiza programas.</li>
@@ -66,20 +82,26 @@
         <li><code>sudo apt remove programa</code> → remove um programa.</li>
     </ul>
 
-    <h2>🔎 Pesquisa</h2>
+
+    <h3>🔎 Pesquisa</h3>
+
     <ul>
         <li><code>find</code> → procura arquivos e pastas.</li>
         <li><code>grep</code> → procura palavras ou textos dentro de arquivos.</li>
     </ul>
 
-    <h2>⚙️ Processos</h2>
+
+    <h3>⚙️ Processos</h3>
+
     <ul>
         <li><code>ps</code> → mostra processos.</li>
         <li><code>top</code> → mostra processos em tempo real.</li>
         <li><code>kill</code> → encerra um processo.</li>
     </ul>
 
-    <h2>⭐ Mais importantes</h2>
+
+    <h3>⭐ Comandos mais importantes</h3>
+
     <p>
         <code>ls</code> = listar |
         <code>cd</code> = entrar |
@@ -91,6 +113,179 @@
         <code>chmod</code> = permissões |
         <code>sudo</code> = administrador
     </p>
+
+
+    <!-- ================= PHP E BANCO ================= -->
+
+    <h2>🐘 PHP e Banco de Dados</h2>
+
+
+    <h3>📦 Arrays</h3>
+
+    <p>
+        <strong>Array</strong> é usado para armazenar vários valores
+        dentro de uma única variável.
+    </p>
+
+
+    <h4>🔢 Array Indexado</h4>
+
+    <p>
+        Usa números como índices, começando normalmente pelo <strong>0</strong>.
+    </p>
+
+    <pre>
+$frutas = ["Maçã", "Banana", "Uva"];
+
+echo $frutas[0];
+    </pre>
+
+    <p>
+        Resultado: <strong>Maçã</strong>
+    </p>
+
+
+    <h4>🏷️ Array Associativo</h4>
+
+    <p>
+        Usa nomes como chaves em vez de números.
+    </p>
+
+    <pre>
+$pessoa = [
+    "nome" => "João",
+    "idade" => 18
+];
+
+echo $pessoa["nome"];
+    </pre>
+
+
+    <h4>🗂️ Array Multidimensional</h4>
+
+    <p>
+        É um array que possui outros arrays dentro dele.
+    </p>
+
+    <pre>
+$alunos = [
+    ["João", 18],
+    ["Maria", 17]
+];
+
+echo $alunos[0][0];
+    </pre>
+
+
+    <h3>🗄️ Banco de Dados</h3>
+
+    <p>
+        O <strong>banco de dados</strong> serve para armazenar e organizar
+        informações.
+    </p>
+
+
+    <h4>➕ Criando um Banco de Dados</h4>
+
+    <pre>
+CREATE DATABASE escola;
+    </pre>
+
+
+    <h4>📋 Criando uma Tabela</h4>
+
+    <pre>
+CREATE TABLE alunos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT
+);
+    </pre>
+
+
+    <h3>🔌 Conectando ao Banco de Dados</h3>
+
+    <p>
+        O PHP pode utilizar o <strong>mysqli</strong> para se conectar
+        ao MySQL.
+    </p>
+
+    <pre>
+$conn = new mysqli(
+    "localhost",
+    "root",
+    "",
+    "escola"
+);
+    </pre>
+
+
+    <h3>➕ Inserindo Dados</h3>
+
+    <p>
+        <strong>INSERT INTO</strong> adiciona dados em uma tabela.
+    </p>
+
+    <pre>
+INSERT INTO alunos (nome, idade)
+VALUES ("João", 18);
+    </pre>
+
+
+    <h3>🔎 Consultando Dados</h3>
+
+    <p>
+        <strong>SELECT</strong> serve para consultar dados.
+    </p>
+
+    <pre>
+SELECT * FROM alunos;
+    </pre>
+
+
+    <h3>📤 Consulta usando PHP</h3>
+
+    <pre>
+$sql = "SELECT * FROM alunos";
+
+$resultado = $conn->query($sql);
+
+while ($aluno = $resultado->fetch_assoc()) {
+    echo $aluno["nome"];
+}
+    </pre>
+
+
+    <h3>📎 Função Include</h3>
+
+    <p>
+        A função <strong>include</strong> permite utilizar o conteúdo
+        de outro arquivo PHP dentro do arquivo atual.
+    </p>
+
+    <pre>
+include "conexao.php";
+    </pre>
+
+    <p>
+        É muito utilizada para reaproveitar códigos, como conexões
+        com banco de dados, menus e cabeçalhos.
+    </p>
+
+
+    <h3>⭐ Para Decorar</h3>
+
+    <ul>
+        <li><strong>Array indexado</strong> → índices numéricos.</li>
+        <li><strong>Array associativo</strong> → chaves com nomes.</li>
+        <li><strong>Array multidimensional</strong> → array dentro de array.</li>
+        <li><strong>CREATE DATABASE</strong> → cria banco de dados.</li>
+        <li><strong>CREATE TABLE</strong> → cria tabela.</li>
+        <li><strong>INSERT INTO</strong> → insere dados.</li>
+        <li><strong>SELECT</strong> → consulta dados.</li>
+        <li><strong>mysqli</strong> → conecta PHP ao MySQL.</li>
+        <li><strong>include</strong> → inclui outro arquivo PHP.</li>
+    </ul>
 
 </body>
 </html>
