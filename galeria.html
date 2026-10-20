@@ -2,99 +2,62 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Galeria - Churrasco do Baiano Sem Miséria</title>
 
     <link rel="stylesheet" href="styles/style.css">
-
     <link rel="stylesheet" href="styles/style-galeria.css">
-
+    <link rel="stylesheet" href="styles/viewer.css">
     <link rel="icon" type="image/png" href="img/icon.png">
-
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
-
 <header class="header">
-
     <div class="container">
-
-        <!-- MENU MOBILE (aparece à esquerda só no celular/tablet) -->
 
         <button class="menu-btn" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </button>
 
-        <!-- LOGO -->
-
         <div class="logo">
-
             <div class="logo-text">
-
                 <h2>CHURRASCO</h2>
-
                 <span>DO BAIANO SEM MISÉRIA</span>
-
             </div>
-
         </div>
 
-        <!-- MENU -->
-
         <nav class="navbar" id="menu">
-
             <ul>
-
                 <li><a href="index.html"><i class="fas fa-house"></i> Início</a></li>
-
                 <li><a href="cardapio.html"><i class="fas fa-drumstick-bite"></i> Cardápio</a></li>
-
                 <li><a class="active" href="galeria.html"><i class="fas fa-camera"></i> Galeria</a></li>
-
                 <li><a href="sobre-nos.html"><i class="fas fa-user-tie"></i> Sobre Nós</a></li>
-
                 <li><a href="localizacao.html"><i class="fas fa-location-dot"></i> Localização</a></li>
-
                 <li><a href="contato.html"><i class="fas fa-phone"></i> Contato</a></li>
-
             </ul>
-
         </nav>
 
-        <!-- REDES SOCIAIS -->
-
         <div class="social">
-
             <a href="#"><i class="fab fa-instagram"></i></a>
-
             <a href="#"><i class="fab fa-facebook-f"></i></a>
-
             <a href="#"><i class="fab fa-whatsapp"></i></a>
-
         </div>
 
     </div>
-
 </header>
 
 <!-- ================= FAIXA DE TÍTULO ================= -->
-
 <section class="pagina-topo">
 
     <div class="topo-overlay"></div>
 
-    <img src="img/churrasco-misto.jpg" alt="Pratos do Churrasco do Baiano" class="topo-bg">
+    <!-- Troque por uma foto do ambiente quando tiver -->
+    <img src="img/churrasco-misto.jpg" alt="Ambiente do Churrasco do Baiano" class="topo-bg">
 
     <div class="container topo-content">
 
@@ -104,102 +67,69 @@
             <span>Galeria</span>
         </div>
 
-        <span class="section-subtitle">CLIQUE E AMPLIE</span>
+        <span class="section-subtitle">NOSSO ESPAÇO</span>
 
-        <h1 class="titulo">GALERIA</h1>
+        <h1 class="titulo">AMBIENTE</h1>
 
-        <p>Confira algumas das deliciosas porções preparadas pelo
-        Churrasco do Baiano Sem Miséria.</p>
+        <p>Conheça o nosso espaço, pensado para você aproveitar
+        um churrasco de verdade com conforto e bom atendimento.</p>
 
         <div class="topo-badges">
-            <span><i class="fas fa-camera-retro"></i> Fotos reais</span>
-            <span><i class="fas fa-drumstick-bite"></i> Pratos autênticos</span>
-            <span><i class="fas fa-star"></i> Feito na hora</span>
+            <span><i class="fas fa-people-roof"></i> Ambiente familiar</span>
+            <span><i class="fas fa-heart"></i> Atendimento acolhedor</span>
+            <span><i class="fas fa-location-dot"></i> Venha nos visitar</span>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= GALERIA ================= -->
-
+<!-- ================= GALERIA DO AMBIENTE ================= -->
 <section class="pagina-galeria">
 
     <div class="container">
 
+        <!--
+            COMO ADICIONAR AS FOTOS:
+            1. Salve a foto em img/ambiente/ (ex: ambiente-01.jpg)
+            2. Se o nome do arquivo for diferente, altere data-src e src do card.
+            3. Altere data-caption, alt e o texto da legenda.
+            4. Para mais fotos, copie um card inteiro (de <figure> até </figure>).
+            Mantenha múltiplos de 3 cards para a grade ficar completa.
+            O primeiro card é o destaque (maior).
+        -->
+
         <div class="galeria">
 
-            <div class="produto">
-                <img src="img/churrasco-misto.jpg" alt="Churrasco Misto">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Churrasco Misto</h3>
-                </div>
-            </div>
+            <figure class="foto" data-viewer data-src="img/ambiente/ambiente-01.jpg" data-caption="Salão principal" tabindex="0" role="button">
+                <img src="img/ambiente/ambiente-01.jpg" alt="Salão principal" loading="lazy">
+                <figcaption class="foto-legenda"><span>Salão principal</span><i class="fas fa-expand"></i></figcaption>
+            </figure>
 
-            <div class="produto">
-                <img src="img/contra-file.jpg" alt="Contra Filé">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Contra Filé</h3>
-                </div>
-            </div>
+            <figure class="foto" data-viewer data-src="img/ambiente/ambiente-02.jpg" data-caption="Área de mesas" tabindex="0" role="button">
+                <img src="img/ambiente/ambiente-02.jpg" alt="Área de mesas" loading="lazy">
+                <figcaption class="foto-legenda"><span>Área de mesas</span><i class="fas fa-expand"></i></figcaption>
+            </figure>
 
-            <div class="produto">
-                <img src="img/costelinha.jpg" alt="Costelinha">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Costelinha</h3>
-                </div>
-            </div>
+            <figure class="foto" data-viewer data-src="img/ambiente/ambiente-03.jpg" data-caption="Churrasqueira" tabindex="0" role="button">
+                <img src="img/ambiente/ambiente-03.jpg" alt="Churrasqueira" loading="lazy">
+                <figcaption class="foto-legenda"><span>Churrasqueira</span><i class="fas fa-expand"></i></figcaption>
+            </figure>
 
-            <div class="produto">
-                <img src="img/baiao.jpg" alt="Baião de Dois">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Baião de Dois</h3>
-                </div>
-            </div>
+            <figure class="foto" data-viewer data-src="img/ambiente/ambiente-04.jpg" data-caption="Balcão de atendimento" tabindex="0" role="button">
+                <img src="img/ambiente/ambiente-04.jpg" alt="Balcão de atendimento" loading="lazy">
+                <figcaption class="foto-legenda"><span>Balcão de atendimento</span><i class="fas fa-expand"></i></figcaption>
+            </figure>
 
-            <div class="produto">
-                <img src="img/arroz-brocolis.jpg" alt="Arroz com Brócolis">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Arroz com Brócolis</h3>
-                </div>
-            </div>
+            <figure class="foto" data-viewer data-src="img/ambiente/ambiente-05.jpg" data-caption="Fachada" tabindex="0" role="button">
+                <img src="img/ambiente/ambiente-05.jpg" alt="Fachada" loading="lazy">
+                <figcaption class="foto-legenda"><span>Fachada</span><i class="fas fa-expand"></i></figcaption>
+            </figure>
 
-            <div class="produto">
-                <img src="img/batata-frita.jpg" alt="Batata Frita">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Batata Frita</h3>
-                </div>
-            </div>
-
-            <div class="produto">
-                <img src="img/aipim.jpg" alt="Aipim Frito">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Aipim Frito</h3>
-                </div>
-            </div>
-
-            <div class="produto">
-                <img src="img/feijao-tropeiro.jpg" alt="Feijão Tropeiro">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Feijão Tropeiro</h3>
-                </div>
-            </div>
-
-            <div class="produto">
-                <img src="img/torresmo.jpg" alt="Torresmo">
-                <div class="produto-overlay">
-                    <i class="fas fa-expand"></i>
-                    <h3>Torresmo</h3>
-                </div>
-            </div>
+            <figure class="foto" data-viewer data-src="img/ambiente/ambiente-06.jpg" data-caption="Nosso espaço" tabindex="0" role="button">
+                <img src="img/ambiente/ambiente-06.jpg" alt="Nosso espaço" loading="lazy">
+                <figcaption class="foto-legenda"><span>Nosso espaço</span><i class="fas fa-expand"></i></figcaption>
+            </figure>
 
         </div>
 
@@ -208,10 +138,9 @@
 </section>
 
 <!-- ================= CHAMADA ================= -->
-
 <section class="call">
 
-    <h2>Bateu a Vontade?</h2>
+    <h2>Venha Conhecer!</h2>
 
     <p>Peça agora e receba o verdadeiro sabor do churrasco na brasa
     direto na sua casa, ou venha nos visitar!</p>
@@ -221,40 +150,28 @@
 </section>
 
 <!-- ================= RODAPÉ ================= -->
-
 <footer>
-
     <div class="container footer-content">
-
         <p><strong>Churrasco do Baiano Sem Miséria</strong></p>
-
         <p><i class="fas fa-location-dot"></i> Duque de Caxias - RJ</p>
-
         <p class="copyright">&copy; 2026 Todos os direitos reservados.</p>
-
     </div>
-
 </footer>
 
-<!-- ================= LIGHTBOX ================= -->
-
-<div class="lightbox" id="lightbox">
-
-    <button class="lightbox-close" id="lightboxClose"><i class="fas fa-xmark"></i></button>
-
-    <button class="arrow lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
-
-    <figure class="lightbox-figure">
-        <img src="" alt="" id="lightboxImg">
-        <figcaption id="lightboxCaption"></figcaption>
+<!-- ================= VISUALIZADOR DE FOTOS ================= -->
+<div class="viewer" id="viewer" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="viewer-close" id="viewerClose" aria-label="Fechar"><i class="fas fa-xmark"></i></button>
+    <button class="viewer-arrow viewer-prev" id="viewerPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+    <figure class="viewer-figure">
+        <img src="" alt="" id="viewerImg">
+        <figcaption id="viewerCaption"></figcaption>
+        <span class="viewer-counter" id="viewerCounter"></span>
     </figure>
-
-    <button class="arrow lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
-
+    <button class="viewer-arrow viewer-next" id="viewerNext" aria-label="Próxima"><i class="fas fa-chevron-right"></i></button>
 </div>
 
 <script src="scripts/script.js"></script>
+<script src="scripts/viewer.js"></script>
 
 </body>
-
 </html>
