@@ -167,29 +167,22 @@
 
 .pagina-cardapio{
     background:#0d0d0d;
-    padding:60px 0 30px;
+    padding:50px 0 30px;
 }
 
-.cardapio-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(440px, 1fr));
-    gap:30px;
-    align-items:start;
+.cardapio-lista{
+    display:flex;
+    flex-direction:column;
+    gap:36px;
 }
 
 .categoria{
     background:linear-gradient(160deg,#181818,#131313);
     border:1px solid rgba(255,255,255,.06);
     border-radius:26px;
-    padding:32px 30px;
+    padding:34px;
     box-shadow:0 18px 40px rgba(0,0,0,.3);
     scroll-margin-top:170px;
-    transition:.4s cubic-bezier(.25,.8,.25,1);
-}
-
-.categoria:hover{
-    box-shadow:0 22px 48px rgba(0,0,0,.4);
-    border-color:rgba(255,193,7,.15);
 }
 
 /* CABEÇALHO DA CATEGORIA */
@@ -197,41 +190,48 @@
 .categoria-header{
     display:flex;
     align-items:center;
-    gap:16px;
-    margin-bottom:24px;
-    padding-bottom:18px;
-    border-bottom:1px solid #262626;
+    gap:18px;
+    margin-bottom:28px;
+    padding-bottom:20px;
+    border-bottom:1px solid #2a2a2a;
 }
 
 .icon-badge{
-    width:54px;
-    height:54px;
+    width:60px;
+    height:60px;
     flex-shrink:0;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:20px;
+    font-size:23px;
     color:#ffc107;
     background:linear-gradient(135deg,#c70000,#6e0000);
-    box-shadow:0 6px 16px rgba(199,0,0,.4), 0 0 0 5px rgba(255,193,7,.06);
+    box-shadow:0 6px 16px rgba(199,0,0,.4), 0 0 0 5px rgba(255,193,7,.07);
 }
 
-.categoria-header h2{
+.categoria-titulo h2{
     font-family:'Bebas Neue',sans-serif;
-    font-size:1.7rem;
+    font-size:2.1rem;
+    line-height:1;
     letter-spacing:2px;
     color:#fff;
 }
 
+.categoria-titulo p{
+    margin-top:6px;
+    font-size:13.5px;
+    color:#9a9a9a;
+}
+
 .categoria-header .count{
     margin-left:auto;
-    font-size:11px;
+    font-size:12px;
     font-weight:600;
     letter-spacing:.5px;
-    color:#999;
-    border:1px solid #333;
-    padding:5px 12px;
+    color:#ffc107;
+    border:1px solid rgba(255,193,7,.35);
+    padding:6px 14px;
     border-radius:20px;
     white-space:nowrap;
 }
@@ -240,66 +240,152 @@
 
 .items-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns:repeat(auto-fill, minmax(330px, 1fr));
+    gap:18px;
+}
+
+.items-grid.simples{
+    grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
     gap:14px;
 }
 
+/* CARD DO ITEM */
+
 .item{
-    background:linear-gradient(160deg,#1e1e1e,#191919);
-    border:1px solid rgba(255,255,255,.06);
-    border-radius:18px;
-    padding:17px 19px;
     display:flex;
-    flex-direction:column;
-    gap:6px;
+    align-items:center;
+    gap:18px;
+    padding:14px;
+    background:linear-gradient(160deg,#1f1f1f,#191919);
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:20px;
     transition:.35s cubic-bezier(.25,.8,.25,1);
 }
 
 .item:hover{
-    border-color:rgba(255,193,7,.35);
-    transform:translateY(-4px);
+    border-color:rgba(255,193,7,.4);
+    transform:translateY(-3px);
     box-shadow:0 14px 28px rgba(0,0,0,.4);
 }
 
-.item-header{
+.item-foto{
+    position:relative;
+    width:112px;
+    height:112px;
+    flex-shrink:0;
+    padding:0;
+    border:none;
+    border-radius:16px;
+    overflow:hidden;
+    background:#222;
+    cursor:zoom-in;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+}
+
+.item-foto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+}
+
+.item-foto:hover img{
+    transform:scale(1.1);
+}
+
+.item-foto .zoom{
+    position:absolute;
+    inset:0;
     display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    gap:10px;
+    align-items:center;
+    justify-content:center;
+    background:rgba(13,13,13,.55);
+    color:#ffc107;
+    font-size:20px;
+    opacity:0;
+    transition:.3s;
+}
+
+.item-foto:hover .zoom,
+.item-foto:focus-visible .zoom{
+    opacity:1;
+}
+
+/* foto ainda não enviada / item sem foto */
+
+.item-foto.vazia{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:default;
+    border:1px dashed #3a3a3a;
+    box-shadow:none;
+}
+
+.item-foto.vazia::before{
+    content:"\f030";
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    font-size:22px;
+    color:#444;
+}
+
+.item-foto.vazia img,
+.item-foto.vazia .zoom{
+    display:none;
+}
+
+.item-info{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
 }
 
 .item h3{
     color:#fff;
-    font-size:1rem;
-    font-weight:500;
+    font-size:1.15rem;
+    font-weight:600;
     line-height:1.3;
 }
 
-.item .preco{
-    color:#ffc107;
-    font-weight:700;
-    font-size:1.05rem;
-    white-space:nowrap;
-}
-
 .item p{
-    color:#a8a8a8;
-    font-size:13.5px;
+    color:#b0b0b0;
+    font-size:14px;
     line-height:1.6;
 }
 
-/* ITEM EM DESTAQUE ("mais pedido") */
+.item-preco{
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:20px;
+    background:#ffc107;
+    color:#111;
+    font-weight:700;
+    font-size:1rem;
+    white-space:nowrap;
+}
+
+/* ITEM SEM FOTO (bebidas) */
+
+.item-simples{
+    justify-content:space-between;
+    padding:18px 20px;
+    gap:12px;
+}
+
+/* ITEM EM DESTAQUE */
 
 .item.destaque{
     grid-column:1 / -1;
     position:relative;
-    display:flex;
-    gap:20px;
-    align-items:stretch;
-    background:linear-gradient(135deg,#201313,#1a1010);
-    border:1px solid rgba(199,0,0,.4);
-    border-radius:22px;
-    padding:20px;
+    gap:26px;
+    padding:22px;
+    background:linear-gradient(135deg,#231414,#1a1010);
+    border:1px solid rgba(199,0,0,.45);
     box-shadow:0 14px 32px rgba(199,0,0,.12);
 }
 
@@ -307,40 +393,29 @@
     content:"MAIS PEDIDO";
     position:absolute;
     top:-11px;
-    left:22px;
+    left:24px;
     background:#ffc107;
     color:#111;
-    font-size:10.5px;
+    font-size:11px;
     font-weight:700;
-    letter-spacing:.5px;
-    padding:4px 12px;
+    letter-spacing:.6px;
+    padding:4px 14px;
     border-radius:20px;
     z-index:2;
 }
 
-.item-img{
-    width:130px;
-    height:130px;
-    flex-shrink:0;
-    object-fit:cover;
-    border-radius:16px;
-    box-shadow:0 8px 20px rgba(0,0,0,.5);
-}
-
-.item-body{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    gap:6px;
+.item.destaque .item-foto{
+    width:190px;
+    height:150px;
 }
 
 .item.destaque h3{
-    font-size:1.15rem;
-    font-weight:600;
+    font-size:1.4rem;
 }
 
-.item.destaque .preco{
-    font-size:1.2rem;
+.item.destaque .item-preco{
+    font-size:1.15rem;
+    padding:6px 18px;
 }
 
 /* NOTA FINAL */
@@ -349,7 +424,7 @@
     display:flex;
     align-items:center;
     gap:10px;
-    margin-top:10px;
+    margin-top:30px;
     padding:16px 20px;
     background:#161616;
     border:1px dashed #333;
@@ -368,13 +443,6 @@
 /* ==========================================
    RESPONSIVIDADE
 ========================================== */
-
-@media(max-width:1150px){
-
-    .cardapio-grid{
-        grid-template-columns:1fr;
-    }
-}
 
 @media(max-width:768px){
 
@@ -401,132 +469,65 @@
     }
 
     .pagina-cardapio{
-        padding:45px 0 20px;
+        padding:40px 0 20px;
+    }
+
+    .cardapio-lista{
+        gap:26px;
     }
 
     .categoria{
-        padding:24px 18px;
+        padding:24px 16px;
     }
 
-    .categoria-header h2{
-        font-size:1.35rem;
+    .categoria-titulo h2{
+        font-size:1.6rem;
     }
 
     .icon-badge{
-        width:44px;
-        height:44px;
-        font-size:17px;
+        width:48px;
+        height:48px;
+        font-size:19px;
     }
 
-    .items-grid{
-        grid-template-columns:1fr 1fr;
+    .items-grid,
+    .items-grid.simples{
+        grid-template-columns:1fr;
+    }
+
+    .item-foto{
+        width:96px;
+        height:96px;
     }
 
     .item.destaque{
-        grid-column:1 / -1;
-        flex-direction:column;
+        gap:18px;
+        padding:18px 14px;
     }
 
-    .item-img{
-        width:100%;
-        height:160px;
+    .item.destaque .item-foto{
+        width:110px;
+        height:110px;
+    }
+
+    .item.destaque h3{
+        font-size:1.2rem;
     }
 }
 
 @media(max-width:480px){
 
-    .items-grid{
-        grid-template-columns:1fr;
-    }
-
     .categoria-header .count{
         display:none;
     }
-}
-/* ===== SETAS DO LIGHTBOX (fixas nas laterais da tela) ===== */
 
-.lightbox .arrow{
-    position:fixed;
-    top:50%;
-    bottom:auto;
-    transform:translateY(-50%);
-    width:56px;
-    height:56px;
-    padding:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.2);
-    background:rgba(255,255,255,.1);
-    backdrop-filter:blur(6px);
-    color:#fff;
-    font-size:20px;
-    cursor:pointer;
-    z-index:10001;
-    transition:background .3s, color .3s;
-}
-
-.lightbox .arrow:hover{
-    background:#c70000;
-    border-color:transparent;
-    color:#ffc107;
-    transform:translateY(-50%);
-}
-
-.lightbox .lightbox-prev{
-    left:24px;
-    right:auto;
-}
-
-.lightbox .lightbox-next{
-    right:24px;
-    left:auto;
-}
-/* imagem centralizada, sem ficar por baixo das setas */
-.lightbox-figure{
-    max-width:calc(100vw - 180px);
-    margin:0 auto;
-}
-
-.lightbox-figure img{
-    max-width:100%;
-    max-height:80vh;
-    object-fit:contain;
-}
-
-/* botão fechar sempre no canto superior direito */
-.lightbox-close{
-    position:fixed;
-    top:20px;
-    right:24px;
-    z-index:10002;
-}
-
-@media(max-width:768px){
-
-    .lightbox .arrow{
-        width:44px;
-        height:44px;
-        font-size:16px;
+    .item.destaque{
+        flex-direction:column;
+        align-items:stretch;
     }
 
-    .lightbox-prev{ left:10px; }
-    .lightbox-next{ right:10px; }
-
-    .lightbox-figure{
-        max-width:calc(100vw - 110px);
-    }
-   .lightbox .arrow{
-        width:42px;
-        height:42px;
-        font-size:16px;
-    }
-
-    .lightbox .lightbox-prev{ left:10px; }
-    .lightbox .lightbox-next{ right:10px; }
-
-    .lightbox-figure{
-        max-width:calc(100vw - 110px);
+    .item.destaque .item-foto{
+        width:100%;
+        height:180px;
     }
 }
