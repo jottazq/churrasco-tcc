@@ -1,5 +1,5 @@
 /* ==========================================
-   FAIXA DE TÍTULO (mesma linguagem do cardápio)
+   FAIXA DE TÍTULO
 ========================================== */
 
 .pagina-topo{
@@ -105,36 +105,47 @@
 }
 
 /* ==========================================
-   GRID DA GALERIA
+   GRID DA GALERIA (AMBIENTE)
 ========================================== */
 
 .pagina-galeria{
     background:#0d0d0d;
-    padding:70px 0 20px;
+    padding:70px 0 30px;
 }
 
 .galeria{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    gap:26px;
+    grid-auto-rows:260px;
+    gap:22px;
 }
 
-.produto{
+/* primeira foto = destaque */
+.foto:nth-child(1){
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.foto{
     position:relative;
+    margin:0;
     border-radius:22px;
     overflow:hidden;
-    aspect-ratio:4 / 3;
-    cursor:pointer;
+    background:linear-gradient(160deg,#1c1c1c,#141414);
+    border:1px solid rgba(255,255,255,.06);
+    cursor:zoom-in;
     box-shadow:0 14px 30px rgba(0,0,0,.35);
     transition:.4s cubic-bezier(.25,.8,.25,1);
 }
 
-.produto:hover{
+.foto:hover,
+.foto:focus-visible{
     transform:translateY(-6px);
     box-shadow:0 20px 40px rgba(199,0,0,.25);
+    outline:none;
 }
 
-.produto img{
+.foto img{
     width:100%;
     height:100%;
     object-fit:cover;
@@ -142,28 +153,31 @@
     transition:transform .6s ease;
 }
 
-.produto:hover img{
-    transform:scale(1.08);
+.foto:hover img{
+    transform:scale(1.07);
 }
 
-.produto-overlay{
+.foto-legenda{
     position:absolute;
-    inset:0;
+    left:0;
+    right:0;
+    bottom:0;
     display:flex;
-    flex-direction:column;
     align-items:center;
-    justify-content:center;
-    gap:10px;
-    text-align:center;
-    padding:16px;
-    background:linear-gradient(180deg, rgba(13,13,13,0) 40%, rgba(13,13,13,.9) 100%);
-    opacity:.92;
-    transition:.35s;
+    justify-content:space-between;
+    gap:12px;
+    padding:40px 20px 18px;
+    background:linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(13,13,13,.92) 100%);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:.3px;
 }
 
-.produto-overlay i{
-    width:44px;
-    height:44px;
+.foto-legenda i{
+    width:38px;
+    height:38px;
+    flex-shrink:0;
     border-radius:50%;
     display:flex;
     align-items:center;
@@ -171,97 +185,51 @@
     background:rgba(255,255,255,.12);
     backdrop-filter:blur(6px);
     color:#ffc107;
-    font-size:16px;
+    font-size:14px;
     opacity:0;
-    transform:translateY(10px);
+    transform:translateY(8px);
     transition:.35s;
 }
 
-.produto-overlay h3{
-    color:#fff;
-    font-size:16px;
-    font-weight:600;
-    letter-spacing:.3px;
-    align-self:flex-end;
-    width:100%;
-    text-align:left;
-}
-
-.produto:hover .produto-overlay i{
+.foto:hover .foto-legenda i{
     opacity:1;
     transform:translateY(0);
 }
 
-.produto:hover .produto-overlay{
-    background:linear-gradient(180deg, rgba(13,13,13,.15) 0%, rgba(13,13,13,.92) 100%);
-}
+/* foto ainda não adicionada: espaço reservado */
 
-/* ==========================================
-   LIGHTBOX
-========================================== */
-
-.lightbox{
-    position:fixed;
-    inset:0;
-    z-index:10000;
-    display:none;
+.foto.vazia{
+    cursor:default;
+    display:flex;
     align-items:center;
     justify-content:center;
-    background:rgba(8,8,8,.92);
-    backdrop-filter:blur(10px);
-    padding:40px;
+    border:1px dashed #333;
+    box-shadow:none;
 }
 
-.lightbox.show{
-    display:flex;
+.foto.vazia:hover{
+    transform:none;
+    box-shadow:none;
 }
 
-.lightbox-figure{
-    max-width:min(90vw, 720px);
-    text-align:center;
+.foto.vazia::before{
+    content:"\f030";
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    font-size:34px;
+    color:#383838;
 }
 
-.lightbox-figure img{
-    max-width:100%;
-    max-height:70vh;
-    border-radius:20px;
-    box-shadow:0 25px 60px rgba(0,0,0,.6);
+.foto.vazia img,
+.foto.vazia .foto-legenda i{
+    display:none;
 }
 
-.lightbox-figure figcaption{
-    margin-top:18px;
-    color:#ffc107;
-    font-family:'Bebas Neue',sans-serif;
-    font-size:1.6rem;
-    letter-spacing:2px;
-}
-
-.lightbox-close{
-    position:absolute;
-    top:28px;
-    right:28px;
-    width:46px;
-    height:46px;
-    border-radius:50%;
-    border:none;
-    background:rgba(255,255,255,.1);
-    color:#fff;
-    font-size:20px;
-    cursor:pointer;
-    transition:.3s;
-    backdrop-filter:blur(6px);
-}
-
-.lightbox-close:hover{
-    background:#c70000;
-    transform:rotate(90deg);
-}
-
-.lightbox-prev,
-.lightbox-next{
-    position:fixed;
-    top:50%;
-    transform:translateY(-50%);
+.foto.vazia .foto-legenda{
+    background:none;
+    justify-content:center;
+    color:#666;
+    font-weight:500;
 }
 
 /* ==========================================
@@ -272,6 +240,7 @@
 
     .galeria{
         grid-template-columns:repeat(2, 1fr);
+        grid-auto-rows:220px;
     }
 }
 
@@ -296,43 +265,33 @@
     }
 
     .galeria{
-        gap:16px;
+        gap:14px;
+        grid-auto-rows:170px;
     }
 
-    .produto{
+    .foto:nth-child(1){
+        grid-column:span 2;
+        grid-row:span 1;
+    }
+
+    .foto{
         border-radius:16px;
     }
 
-    .produto-overlay h3{
+    .foto-legenda{
         font-size:14px;
-    }
-
-    .lightbox{
-        padding:20px;
-    }
-
-    .lightbox-close{
-        top:16px;
-        right:16px;
-        width:40px;
-        height:40px;
+        padding:30px 14px 12px;
     }
 }
 
 @media(max-width:480px){
 
     .galeria{
-        grid-template-columns:1fr 1fr;
+        grid-auto-rows:140px;
         gap:12px;
     }
 
-    .produto-overlay{
-        padding:10px;
-    }
-
-    .produto-overlay i{
-        width:34px;
-        height:34px;
-        font-size:13px;
+    .foto-legenda i{
+        display:none;
     }
 }
