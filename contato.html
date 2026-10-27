@@ -2,34 +2,23 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contato - Churrasco do Baiano Sem Miséria</title>
+    <title>Cardápio - Churrasco do Baiano Sem Miséria</title>
 
     <link rel="stylesheet" href="styles/style.css">
-
-    <link rel="stylesheet" href="styles/style-contato.css">
-
+    <link rel="stylesheet" href="styles/style-cardapio.css">
+    <link rel="stylesheet" href="styles/viewer.css">
     <link rel="icon" type="image/png" href="img/icon.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
-
 <header class="header">
-
     <div class="container">
 
         <button class="menu-btn" onclick="toggleMenu()">
@@ -37,185 +26,696 @@
         </button>
 
         <div class="logo">
-
             <div class="logo-text">
-
                 <h2>CHURRASCO</h2>
-
                 <span>DO BAIANO SEM MISÉRIA</span>
-
             </div>
-
         </div>
 
         <nav class="navbar" id="menu">
-
             <ul>
-
                 <li><a href="index.html"><i class="fas fa-house"></i> Início</a></li>
-
-                <li><a href="cardapio.html"><i class="fas fa-drumstick-bite"></i> Cardápio</a></li>
-
+                <li><a class="active" href="cardapio.html"><i class="fas fa-drumstick-bite"></i> Cardápio</a></li>
                 <li><a href="galeria.html"><i class="fas fa-camera"></i> Galeria</a></li>
-
                 <li><a href="sobre-nos.html"><i class="fas fa-user-tie"></i> Sobre Nós</a></li>
-
                 <li><a href="localizacao.html"><i class="fas fa-location-dot"></i> Localização</a></li>
-
-                <li><a class="active" href="contato.html"><i class="fas fa-phone"></i> Contato</a></li>
-
+                <li><a href="contato.html"><i class="fas fa-phone"></i> Contato</a></li>
             </ul>
-
         </nav>
 
         <div class="social">
-
-            <a href="#"><i class="fab fa-instagram"></i></a>
-
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/5521991633808" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
 
     </div>
-
 </header>
 
 <!-- ================= FAIXA DE TÍTULO ================= -->
-
 <section class="pagina-topo">
 
     <div class="topo-overlay"></div>
 
-    <img src="img/fachada.jpg" alt="Fachada Churrasco do Baiano" class="topo-bg">
+    <img src="img/churrasco-misto.jpg" alt="Churrasco na brasa" class="topo-bg">
 
     <div class="container topo-content">
 
         <div class="breadcrumb">
             <a href="index.html">Início</a>
             <i class="fas fa-chevron-right"></i>
-            <span>Contato</span>
+            <span>Cardápio</span>
         </div>
 
-        <span class="section-subtitle">ESTAMOS À DISPOSIÇÃO</span>
+        <span class="section-subtitle">SABOR NA BRASA</span>
 
-        <h1 class="titulo">FALE CONOSCO</h1>
+        <h1 class="titulo">CARDÁPIO</h1>
 
-        <p>Faça seu pedido ou tire suas dúvidas com a gente.</p>
+        <p>
+            Cortes selecionados, acompanhamentos e bebidas geladas
+            para deixar seu churrasco completo.
+        </p>
 
         <div class="topo-badges">
-            <span><i class="fas fa-bolt"></i> Resposta rápida</span>
-            <span><i class="fas fa-headset"></i> Atendimento humanizado</span>
+            <span><i class="fas fa-fire"></i> Direto da brasa</span>
+            <span><i class="fas fa-motorcycle"></i> Delivery rápido</span>
+            <span><i class="fas fa-kitchen-set"></i> Receita da casa</span>
         </div>
+
+        <a href="https://pedido.anota.ai/loja/churrasco-do-baiano-sem-miseria-1?f=msa"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">
+            PEDIR AGORA
+        </a>
 
     </div>
 
 </section>
 
-<!-- ================= CANAIS DE CONTATO ================= -->
+<!-- ================= NAVEGAÇÃO RÁPIDA ================= -->
+<nav class="menu-nav">
+    <div class="container">
+        <a href="#churrasco">Churrasco 5P</a>
+        <a href="#acompanhamentos">Acompanhamentos</a>
+        <a href="#meia-porcao">Meia Porção</a>
+        <a href="#bebidas">Bebidas</a>
+        <a href="#refrigerantes">Refrigerantes</a>
+        <a href="#cervejas">Cervejas</a>
+    </div>
+</nav>
 
-<section class="pagina-contato">
+<!-- ================= CARDÁPIO ================= -->
+<section class="pagina-cardapio">
 
     <div class="container">
 
-        <div class="contato-grid">
+        <div class="cardapio-lista">
 
-            <div class="contato-card">
-                <div class="icon-badge"><i class="fab fa-whatsapp"></i></div>
-                <h3>WhatsApp</h3>
-                <p>Faça seu pedido de forma rápida.</p>
-                <a href="#" class="btn btn-primary">Chamar no WhatsApp</a>
+            <!-- ===== CHURRASCO PARA 5 PESSOAS ===== -->
+            <div class="categoria" id="churrasco">
+
+                <div class="categoria-header">
+                    <span class="icon-badge"><i class="fas fa-fire"></i></span>
+
+                    <div class="categoria-titulo">
+                        <h2>Churrasco para 5 Pessoas</h2>
+                        <p>Cortes preparados na brasa</p>
+                    </div>
+
+                    <span class="count">3 itens</span>
+                </div>
+
+                <div class="items-grid">
+
+                    <article class="item destaque">
+                        <button type="button" class="item-foto" data-viewer data-src="img/churrasco-misto.jpg" data-caption="Churrasco Misto">
+                            <img src="img/churrasco-misto.jpg" alt="Churrasco Misto" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Churrasco Misto</h3>
+                            <p>Queijo, frango, coração, linguiça, costela suína e contra filé. Acompanha molho e farofa.</p>
+                            <span class="item-preco">R$ 60,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/contra-file.jpg" data-caption="Contra Filé">
+                            <img src="img/contra-file.jpg" alt="Contra Filé" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Contra Filé</h3>
+                            <span class="item-preco">R$ 23,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/costelinha.jpg" data-caption="Costelinha">
+                            <img src="img/costelinha.jpg" alt="Costelinha" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Costelinha</h3>
+                            <span class="item-preco">R$ 17,00</span>
+                        </div>
+                    </article>
+
+                </div>
             </div>
 
-            <div class="contato-card">
-                <div class="icon-badge"><i class="fab fa-instagram"></i></div>
-                <h3>Instagram</h3>
-                <p>Veja nossas novidades e promoções.</p>
-                <a href="#" class="btn btn-primary">Acessar Instagram</a>
+            <!-- ===== ACOMPANHAMENTOS ===== -->
+            <div class="categoria" id="acompanhamentos">
+
+                <div class="categoria-header">
+                    <span class="icon-badge"><i class="fas fa-bowl-rice"></i></span>
+
+                    <div class="categoria-titulo">
+                        <h2>Acompanhamentos</h2>
+                        <p>Porção inteira</p>
+                    </div>
+
+                    <span class="count">6 itens</span>
+                </div>
+
+                <div class="items-grid">
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/baiao.jpg" data-caption="Baião de Dois">
+                            <img src="img/baiao.jpg" alt="Baião de Dois" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Baião de Dois</h3>
+                            <span class="item-preco">R$ 26,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/arroz-brocolis.jpg" data-caption="Arroz com Brócolis">
+                            <img src="img/arroz-brocolis.jpg" alt="Arroz com Brócolis" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Arroz com Brócolis</h3>
+                            <span class="item-preco">R$ 26,00</span>
+                        </div>
+                    </article>
+
+                    <!-- ARROZ BRANCO: PORÇÃO INTEIRA -->
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/arroz-branco.jpg" data-caption="Arroz Branco">
+                            <img src="img/arroz-branco.jpg" alt="Arroz Branco" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Arroz Branco</h3>
+                            <span class="item-preco">R$ 21,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/feijao-tropeiro.jpg" data-caption="Feijão Tropeiro">
+                            <img src="img/feijao-tropeiro.jpg" alt="Feijão Tropeiro" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Feijão Tropeiro</h3>
+                            <span class="item-preco">R$ 26,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/batata-frita.jpg" data-caption="Batata Frita">
+                            <img src="img/batata-frita.jpg" alt="Batata Frita" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Batata Frita</h3>
+                            <span class="item-preco">R$ 26,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/aipim.jpg" data-caption="Aipim Frito">
+                            <img src="img/aipim.jpg" alt="Aipim Frito" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Aipim Frito</h3>
+                            <span class="item-preco">R$ 26,00</span>
+                        </div>
+                    </article>
+
+                </div>
             </div>
 
-            <div class="contato-card">
-                <div class="icon-badge"><i class="fas fa-clock"></i></div>
-                <h3>Funcionamento</h3>
-                <p>Segunda a Domingo<br>11:00 às 23:00</p>
+            <!-- ===== MEIA PORÇÃO PARA 3 PESSOAS ===== -->
+            <div class="categoria" id="meia-porcao">
+
+                <div class="categoria-header">
+                    <span class="icon-badge"><i class="fas fa-drumstick-bite"></i></span>
+
+                    <div class="categoria-titulo">
+                        <h2>Meia Porção para 3 Pessoas</h2>
+                        <p>Ideal para quem quer menos</p>
+                    </div>
+
+                    <span class="count">8 itens</span>
+                </div>
+
+                <div class="items-grid">
+
+                    <article class="item destaque">
+                        <button type="button" class="item-foto" data-viewer data-src="img/churrasco-misto.jpg" data-caption="Churrasco Misto (Meia Porção)">
+                            <img src="img/churrasco-misto.jpg" alt="Churrasco Misto meia porção" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Churrasco Misto</h3>
+                            <p>Frango, linguiça, costela suína e contra filé. Acompanha molho e farofa.</p>
+                            <span class="item-preco">R$ 50,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/batata-frita.jpg" data-caption="Batata Frita (Meia Porção)">
+                            <img src="img/batata-frita.jpg" alt="Batata Frita meia porção" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Batata Frita</h3>
+                            <span class="item-preco">R$ 19,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/aipim.jpg" data-caption="Aipim Frito (Meia Porção)">
+                            <img src="img/aipim.jpg" alt="Aipim Frito meia porção" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Aipim Frito</h3>
+                            <span class="item-preco">R$ 19,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/feijao-tropeiro.jpg" data-caption="Feijão Tropeiro (Meia Porção)">
+                            <img src="img/feijao-tropeiro.jpg" alt="Feijão Tropeiro meia porção" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Feijão Tropeiro</h3>
+                            <span class="item-preco">R$ 19,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/baiao.jpg" data-caption="Baião de Dois (Meia Porção)">
+                            <img src="img/baiao.jpg" alt="Baião de Dois meia porção" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Baião de Dois</h3>
+                            <span class="item-preco">R$ 19,00</span>
+                        </div>
+                    </article>
+
+                    <!-- ARROZ BRANCO: MEIA PORÇÃO -->
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/arroz-branco.jpg" data-caption="Arroz Branco (Meia Porção)">
+                            <img src="img/arroz-branco.jpg" alt="Arroz Branco meia porção" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Arroz Branco</h3>
+                            <span class="item-preco">R$ 15,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/arroz-brocolis.jpg" data-caption="Arroz com Brócolis (Meia Porção)">
+                            <img src="img/arroz-brocolis.jpg" alt="Arroz com Brócolis meia porção" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Arroz com Brócolis</h3>
+                            <span class="item-preco">R$ 15,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/torresmo.jpg" data-caption="Torresmo">
+                            <img src="img/torresmo.jpg" alt="Torresmo" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Torresmo</h3>
+                            <span class="item-preco">R$ 11,00</span>
+                        </div>
+                    </article>
+
+                </div>
             </div>
 
-        </div>
+            <!-- ===== BEBIDAS ===== -->
+            <div class="categoria" id="bebidas">
 
-        <!-- ================= FORMULÁRIO ================= -->
+                <div class="categoria-header">
+                    <span class="icon-badge"><i class="fas fa-glass-water"></i></span>
 
-        <div class="formulario-card">
+                    <div class="categoria-titulo">
+                        <h2>Bebidas</h2>
+                        <p>Sempre geladas</p>
+                    </div>
 
-            <div class="categoria-header">
-                <div class="icon-badge"><i class="fas fa-envelope"></i></div>
-                <h2>Envie uma mensagem</h2>
+                    <span class="count">5 itens</span>
+                </div>
+
+                <div class="items-grid">
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/suco-natural.jpg" data-caption="Suco Natural">
+                            <img src="img/suco-natural.jpg" alt="Suco Natural" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Suco Natural</h3>
+                            <span class="item-preco">R$ 10,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/agua.jpg" data-caption="Água sem gás">
+                            <img src="img/agua.jpg" alt="Água sem gás" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Água sem gás</h3>
+                            <span class="item-preco">R$ 2,50</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/guaravita.jpg" data-caption="Guaravita">
+                            <img src="img/guaravita.jpg" alt="Guaravita" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Guaravita</h3>
+                            <span class="item-preco">R$ 2,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/h2o.jpg" data-caption="H2O">
+                            <img src="img/h2o.jpg" alt="H2O" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>H2O</h3>
+                            <span class="item-preco">R$ 7,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/red-bull.jpg" data-caption="Red Bull">
+                            <img src="img/red-bull.jpg" alt="Red Bull" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Red Bull</h3>
+                            <span class="item-preco">R$ 12,00</span>
+                        </div>
+                    </article>
+
+                </div>
             </div>
 
-            <form id="form-contato">
+            <!-- ===== REFRIGERANTES ===== -->
+            <div class="categoria" id="refrigerantes">
 
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Seu nome"
-                    required
-                >
+                <div class="categoria-header">
+                    <span class="icon-badge"><i class="fas fa-bottle-water"></i></span>
 
-                <input
-                    type="tel"
-                    id="telefone"
-                    name="telefone"
-                    placeholder="Seu telefone"
-                    required
-                >
+                    <div class="categoria-titulo">
+                        <h2>Refrigerantes</h2>
+                        <p>Latas, 600ml e 2 litros</p>
+                    </div>
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Seu e-mail"
-                    required
-                >
+                    <span class="count">5 itens</span>
+                </div>
 
-                <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    placeholder="Digite sua mensagem"
-                    required></textarea>
+                <div class="items-grid">
 
-                <button type="submit" class="btn btn-primary">
-                    Enviar mensagem
-                </button>
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/refrigerante-350ml.jpg" data-caption="Refrigerante 350ml">
+                            <img src="img/refrigerante-350ml.jpg" alt="Refrigerante 350ml" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
 
-            </form>
+                        <div class="item-info">
+                            <h3>Refrigerante 350ml</h3>
+                            <span class="item-preco">R$ 6,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/refrigerante-600ml.jpg" data-caption="Refrigerante 600ml">
+                            <img src="img/refrigerante-600ml.jpg" alt="Refrigerante 600ml" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Refrigerante 600ml</h3>
+                            <span class="item-preco">R$ 8,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/coca-cola-2l.jpg" data-caption="Coca-Cola 2L">
+                            <img src="img/coca-cola-2l.jpg" alt="Coca-Cola 2 litros" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Coca-Cola 2L</h3>
+                            <span class="item-preco">R$ 15,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/fanta-2l.jpg" data-caption="Fanta Uva/Laranja 2L">
+                            <img src="img/fanta-2l.jpg" alt="Fanta Uva e Laranja 2 litros" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Fanta Uva/Laranja 2L</h3>
+                            <span class="item-preco">R$ 15,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/guarana-antarctica-2l.jpg" data-caption="Guaraná Antarctica 2L">
+                            <img src="img/guarana-antarctica-2l.jpg" alt="Guaraná Antarctica 2 litros" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Guaraná Antarctica 2L</h3>
+                            <span class="item-preco">R$ 15,00</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- ===== CERVEJAS ===== -->
+            <div class="categoria" id="cervejas">
+
+                <div class="categoria-header">
+                    <span class="icon-badge"><i class="fas fa-beer-mug-empty"></i></span>
+
+                    <div class="categoria-titulo">
+                        <h2>Cervejas</h2>
+                        <p>Estupidamente geladas</p>
+                    </div>
+
+                    <span class="count">7 itens</span>
+                </div>
+
+                <div class="items-grid">
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/brahma-600ml.jpg" data-caption="Brahma 600ml">
+                            <img src="img/brahma-600ml.jpg" alt="Brahma 600ml" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Brahma 600ml</h3>
+                            <span class="item-preco">R$ 10,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/antarctica-600ml.jpg" data-caption="Antarctica 600ml">
+                            <img src="img/antarctica-600ml.jpg" alt="Antarctica 600ml" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Antarctica 600ml</h3>
+                            <span class="item-preco">R$ 10,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/spaten-600ml.jpg" data-caption="Spaten 600ml">
+                            <img src="img/spaten-600ml.jpg" alt="Spaten 600ml" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Spaten 600ml</h3>
+                            <span class="item-preco">R$ 12,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/heineken-long-neck.jpg" data-caption="Heineken Long Neck">
+                            <img src="img/heineken-long-neck.jpg" alt="Heineken Long Neck" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Heineken Long Neck</h3>
+                            <span class="item-preco">R$ 10,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/brahma-latao.jpg" data-caption="Brahma Latão">
+                            <img src="img/brahma-latao.jpg" alt="Brahma Latão" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Brahma Latão</h3>
+                            <span class="item-preco">R$ 7,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/antarctica-latao.jpg" data-caption="Antarctica Latão">
+                            <img src="img/antarctica-latao.jpg" alt="Antarctica Latão" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Antarctica Latão</h3>
+                            <span class="item-preco">R$ 7,00</span>
+                        </div>
+                    </article>
+
+                    <article class="item">
+                        <button type="button" class="item-foto" data-viewer data-src="img/chopp-vinho.jpg" data-caption="Chopp de Vinho">
+                            <img src="img/chopp-vinho.jpg" alt="Chopp de Vinho em garrafa" loading="lazy">
+                            <span class="zoom"><i class="fas fa-expand"></i></span>
+                        </button>
+
+                        <div class="item-info">
+                            <h3>Chopp de Vinho (Garrafa)</h3>
+                            <span class="item-preco">R$ 10,00</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
 
         </div>
 
     </div>
+
+    <!-- ================= OBSERVAÇÃO ================= -->
+    <div class="container">
+        <p class="observacao">
+            <i class="fas fa-circle-info"></i>
+            Preços sujeitos a alteração sem aviso prévio. Consulte a disponibilidade
+            dos itens antes de fechar o pedido.
+        </p>
+    </div>
+
+</section>
+
+<!-- ================= CHAMADA ================= -->
+<section class="call">
+
+    <h2>Ficou com fome?</h2>
+
+    <p>
+        Peça agora e receba o verdadeiro sabor do churrasco na brasa
+        direto na sua casa, ou venha nos visitar!
+    </p>
+
+    <a href="https://wa.me/5521991633808"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-primary">
+        <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+    </a>
 
 </section>
 
 <!-- ================= RODAPÉ ================= -->
-
 <footer>
-
     <div class="container footer-content">
 
         <p><strong>Churrasco do Baiano Sem Miséria</strong></p>
 
-        <p><i class="fas fa-location-dot"></i> Duque de Caxias - RJ</p>
+        <p>
+            <i class="fas fa-location-dot"></i>
+            Duque de Caxias - RJ
+        </p>
 
-        <p class="copyright">&copy; 2026 Todos os direitos reservados.</p>
+        <p class="copyright">
+            &copy; 2026 Todos os direitos reservados.
+        </p>
 
     </div>
-
 </footer>
 
-<script src="scripts/script.js"></script>
+<!-- ================= VISUALIZADOR DE FOTOS ================= -->
+<div class="viewer" id="viewer" aria-hidden="true" role="dialog" aria-modal="true">
 
-<script src="scripts/script-contato.js"></script>
+    <button class="viewer-close" id="viewerClose" aria-label="Fechar">
+        <i class="fas fa-xmark"></i>
+    </button>
+
+    <button class="viewer-arrow viewer-prev" id="viewerPrev" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <figure class="viewer-figure">
+        <img src="" alt="" id="viewerImg">
+        <figcaption id="viewerCaption"></figcaption>
+        <span class="viewer-counter" id="viewerCounter"></span>
+    </figure>
+
+    <button class="viewer-arrow viewer-next" id="viewerNext" aria-label="Próxima">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="scripts/script.js"></script>
+<script src="scripts/viewer.js"></script>
 
 </body>
-
 </html>
