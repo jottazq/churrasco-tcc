@@ -1,0 +1,18 @@
+# Painel: não indexar e nunca guardar em cache
+Options -Indexes
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow, noarchive"
+    Header set X-Frame-Options "DENY"
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Arquivos internos do painel (não são páginas)
+<FilesMatch "^_.*\.php$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

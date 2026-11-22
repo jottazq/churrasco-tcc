@@ -418,6 +418,25 @@
     padding:6px 18px;
 }
 
+/* ITEM ESGOTADO (marcado pelo painel) */
+
+.item.esgotado .item-foto img{
+    filter:grayscale(.85) brightness(.65);
+}
+
+.item.esgotado h3{
+    color:#9a9a9a;
+}
+
+.item-preco.esgotado-tag{
+    background:transparent;
+    color:#ff6b6b;
+    border:1px solid rgba(199,0,0,.6);
+    font-size:.85rem;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+}
+
 /* NOTA FINAL */
 
 .observacao{

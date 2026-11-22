@@ -1,0 +1,11 @@
+# Senha do banco: NUNCA vai para o GitHub (é criada pelo instalador no servidor)
+includes/config.php
+
+# Fotos enviadas pelo painel ficam só no servidor
+img/uploads/*
+!img/uploads/.htaccess
+!img/uploads/.gitkeep
+
+# Sistema
+.DS_Store
+Thumbs.db

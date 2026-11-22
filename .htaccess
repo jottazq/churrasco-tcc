@@ -1,0 +1,40 @@
+# ============================================================
+#  Churrasco do Baiano Sem Miséria — configuração do servidor
+# ============================================================
+
+DirectoryIndex index.php index.html
+Options -Indexes
+
+# Não deixa ninguém baixar arquivos internos
+<FilesMatch "^(config\.php|config\.example\.php|schema\.sql|seed-cardapio\.php|\.gitignore|\.gitkeep)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Endereços antigos (.html) levam para as páginas novas (.php)
+    RewriteRule ^(index|cardapio|galeria|sobre-nos|localizacao|contato)\.html$ $1.php [R=301,L]
+</IfModule>
+
+# Cache de imagens, estilos e scripts (acelera o site)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png  "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType text/css   "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
