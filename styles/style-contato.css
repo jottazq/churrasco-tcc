@@ -136,6 +136,14 @@
     margin-bottom:40px;
 }
 
+/* quando só há 2 cartões (ex.: Instagram ainda não cadastrado) */
+.contato-grid.dois{
+    grid-template-columns:repeat(2, 1fr);
+    max-width:820px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
 .contato-card{
     background:linear-gradient(160deg,#181818,#131313);
     border:1px solid rgba(255,255,255,.06);
@@ -254,8 +262,10 @@
 
 @media(max-width:900px){
 
-    .contato-grid{
+    .contato-grid,
+    .contato-grid.dois{
         grid-template-columns:1fr;
+        max-width:none;
     }
 }
 

@@ -106,7 +106,8 @@ if (track){
 
 const galeria = document.querySelector(".galeria");
 
-if (galeria){
+// (a galeria nova usa o viewer.js; este bloco antigo só roda se existir o #lightbox)
+if (galeria && document.getElementById("lightbox")){
 
     const fotos = document.querySelectorAll(".produto");
     const lightbox = document.getElementById("lightbox");
