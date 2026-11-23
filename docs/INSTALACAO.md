@@ -77,7 +77,19 @@ Acesse `https://seusite.com.br/admin` e entre com o usuário e a senha que você
 
 ## Para quem for mexer no código
 
-- `admin/` — as telas do painel · `includes/` — banco, login, upload e funções comuns
-- `database/schema.sql` — estrutura das tabelas · `database/seed-cardapio.php` — cardápio inicial
-- `index.php`, `cardapio.php`, `galeria.php`, `sobre-nos.php`, `localizacao.php`, `contato.php` — páginas públicas
+```
+raiz do site
+├── index.php, cardapio.php, galeria.php,    ← entradas das páginas (o endereço do site)
+│   sobre-nos.php, localizacao.php, contato.php
+├── paginas/    código de cada página pública
+├── admin/      telas do painel de administração
+├── includes/   banco de dados, login, upload e funções comuns
+├── install/    instalador (rodar uma vez)
+├── database/   estrutura das tabelas e o cardápio inicial
+├── styles/  scripts/  img/   visual, comportamentos e fotos
+├── docs/       este guia
+└── backup-site-antigo/   o site como era antes do painel (não fica público)
+```
+
+- As páginas da raiz só chamam o arquivo de mesmo nome em `paginas/`. Elas precisam ficar na raiz para o endereço (`/cardapio.php`) e os links não mudarem.
 - Todas as consultas ao banco usam parâmetros (sem SQL montado na mão) e todo texto é escapado ao ser exibido.

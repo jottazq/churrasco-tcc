@@ -1,0 +1,382 @@
+/* ==========================================
+   FAIXA DE TÍTULO (mesma linguagem das outras páginas)
+========================================== */
+
+.pagina-topo{
+    margin-top:90px;
+    padding:90px 20px 70px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:0 0 40px 40px;
+}
+
+.topo-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
+}
+
+.topo-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+        linear-gradient(180deg, rgba(13,13,13,.55) 0%, rgba(13,13,13,.85) 60%, #0d0d0d 100%),
+        linear-gradient(90deg, rgba(199,0,0,.55), rgba(13,13,13,.55));
+}
+
+.topo-content{
+    position:relative;
+    z-index:2;
+}
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+    font-size:13px;
+    color:#bbb;
+}
+
+.breadcrumb a{
+    color:#ccc;
+    transition:.3s;
+}
+
+.breadcrumb a:hover{
+    color:#ffc107;
+}
+
+.breadcrumb i{
+    font-size:10px;
+    color:#666;
+}
+
+.breadcrumb span{
+    color:#ffc107;
+    font-weight:600;
+}
+
+.pagina-topo .section-subtitle{
+    margin-bottom:10px;
+}
+
+.pagina-topo .titulo{
+    margin-bottom:16px;
+}
+
+.pagina-topo p{
+    max-width:600px;
+    margin:0 auto 26px;
+    color:#eee;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.topo-badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.topo-badges span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    font-size:13px;
+    color:#eee;
+    backdrop-filter:blur(4px);
+}
+
+.topo-badges i{
+    color:#ffc107;
+}
+
+/* ==========================================
+   SEÇÃO LOCALIZAÇÃO
+========================================== */
+
+.pagina-localizacao{
+    background:#0d0d0d;
+    padding:70px 0 40px;
+}
+
+.icon-badge{
+    width:54px;
+    height:54px;
+    flex-shrink:0;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    color:#ffc107;
+    background:linear-gradient(135deg,#c70000,#6e0000);
+    box-shadow:0 6px 16px rgba(199,0,0,.4), 0 0 0 5px rgba(255,193,7,.06);
+}
+
+/* ===== CARDS DE INFO ===== */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:24px;
+    margin-bottom:30px;
+}
+
+.info-card{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    background:linear-gradient(160deg,#181818,#131313);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:26px;
+    padding:30px 28px;
+    box-shadow:0 18px 40px rgba(0,0,0,.3);
+    transition:.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.info-card:hover{
+    box-shadow:0 22px 48px rgba(0,0,0,.4);
+    border-color:rgba(255,193,7,.15);
+}
+
+.info-card h2{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.5rem;
+    letter-spacing:1.5px;
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.info-card p{
+    color:#c2c2c2;
+    line-height:1.8;
+    font-size:14.5px;
+}
+
+.horario-lista{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.horario-lista li{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    padding-bottom:8px;
+    text-align:center;
+    border-bottom:1px solid #262626;
+    font-size:14px;
+    color:#e0e0e0;
+}
+
+.horario-lista li span{
+    flex:0 0 auto;
+}
+
+.horario-lista li span:first-child{
+    width:90px;
+    text-align:right;
+}
+
+.horario-lista li span:last-child{
+    width:110px;
+    text-align:left;
+}
+}
+
+.horario-lista li:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+}
+
+.horario-lista li span:first-child{
+    color:#999;
+}
+
+.horario-lista .fechado{
+    color:#c70000;
+    font-weight:600;
+}
+
+/* ===== MAPA ===== */
+
+.mapa-card{
+    background:linear-gradient(160deg,#181818,#131313);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:26px;
+    padding:32px 30px;
+    box-shadow:0 18px 40px rgba(0,0,0,.3);
+    margin-bottom:30px;
+}
+
+.mapa-card .categoria-header{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:22px;
+    padding-bottom:18px;
+    border-bottom:1px solid #262626;
+}
+
+.mapa-card h2{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.7rem;
+    letter-spacing:2px;
+    color:#fff;
+}
+
+.mapa-wrap{
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 14px 32px rgba(0,0,0,.4);
+}
+
+.mapa-wrap iframe{
+    width:100%;
+    height:420px;
+    border:none;
+    display:block;
+}
+
+/* ===== BOTÕES ===== */
+
+.localizacao-botoes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.localizacao-botoes .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.2);
+    color:#fff;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-outline:hover{
+    border-color:#ffc107;
+    color:#ffc107;
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:900px){
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .pagina-topo{
+        padding:70px 20px 50px;
+        margin-top:75px;
+    }
+
+    .breadcrumb{
+        font-size:12px;
+    }
+
+    .topo-badges span{
+        font-size:12px;
+        padding:7px 14px;
+    }
+
+    .pagina-localizacao{
+        padding:45px 0 25px;
+    }
+
+    .icon-badge{
+        width:44px;
+        height:44px;
+        font-size:17px;
+    }
+
+    .info-card{
+        flex-direction:column;
+        gap:14px;
+        padding:22px 20px;
+        border-radius:20px;
+    }
+
+    .info-card h2{
+        font-size:1.3rem;
+    }
+
+    .info-card p{
+        font-size:14px;
+    }
+
+    .mapa-card{
+        padding:22px 18px;
+        border-radius:20px;
+    }
+
+    .mapa-card h2{
+        font-size:1.35rem;
+    }
+
+    .mapa-wrap iframe{
+        height:280px;
+    }
+
+    .localizacao-botoes{
+        flex-direction:column;
+    }
+
+    .localizacao-botoes .btn{
+        width:100%;
+        justify-content:center;
+        text-align:center;
+    }
+}
+
+@media(max-width:480px){
+
+    .pagina-topo .titulo{
+        font-size:2.3rem;
+    }
+
+    .icon-badge{
+        width:40px;
+        height:40px;
+        font-size:15px;
+    }
+
+    .info-card,
+    .mapa-card{
+        padding:18px 16px;
+    }
+}
