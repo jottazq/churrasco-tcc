@@ -1,0 +1,297 @@
+/* ==========================================
+   FAIXA DE TÍTULO
+========================================== */
+
+.pagina-topo{
+    margin-top:90px;
+    padding:90px 20px 70px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:0 0 40px 40px;
+}
+
+.topo-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
+}
+
+.topo-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+        linear-gradient(180deg, rgba(13,13,13,.55) 0%, rgba(13,13,13,.85) 60%, #0d0d0d 100%),
+        linear-gradient(90deg, rgba(199,0,0,.55), rgba(13,13,13,.55));
+}
+
+.topo-content{
+    position:relative;
+    z-index:2;
+}
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+    font-size:13px;
+    color:#bbb;
+}
+
+.breadcrumb a{
+    color:#ccc;
+    transition:.3s;
+}
+
+.breadcrumb a:hover{
+    color:#ffc107;
+}
+
+.breadcrumb i{
+    font-size:10px;
+    color:#666;
+}
+
+.breadcrumb span{
+    color:#ffc107;
+    font-weight:600;
+}
+
+.pagina-topo .section-subtitle{
+    margin-bottom:10px;
+}
+
+.pagina-topo .titulo{
+    margin-bottom:16px;
+}
+
+.pagina-topo p{
+    max-width:600px;
+    margin:0 auto 26px;
+    color:#eee;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.topo-badges{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.topo-badges span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    font-size:13px;
+    color:#eee;
+    backdrop-filter:blur(4px);
+}
+
+.topo-badges i{
+    color:#ffc107;
+}
+
+/* ==========================================
+   GRID DA GALERIA (AMBIENTE)
+========================================== */
+
+.pagina-galeria{
+    background:#0d0d0d;
+    padding:70px 0 30px;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows:260px;
+    gap:22px;
+}
+
+/* primeira foto = destaque */
+.foto:nth-child(1){
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.foto{
+    position:relative;
+    margin:0;
+    border-radius:22px;
+    overflow:hidden;
+    background:linear-gradient(160deg,#1c1c1c,#141414);
+    border:1px solid rgba(255,255,255,.06);
+    cursor:zoom-in;
+    box-shadow:0 14px 30px rgba(0,0,0,.35);
+    transition:.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.foto:hover,
+.foto:focus-visible{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(199,0,0,.25);
+    outline:none;
+}
+
+.foto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .6s ease;
+}
+
+.foto:hover img{
+    transform:scale(1.07);
+}
+
+.foto-legenda{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:40px 20px 18px;
+    background:linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(13,13,13,.92) 100%);
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:.3px;
+}
+
+.foto-legenda i{
+    width:38px;
+    height:38px;
+    flex-shrink:0;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(6px);
+    color:#ffc107;
+    font-size:14px;
+    opacity:0;
+    transform:translateY(8px);
+    transition:.35s;
+}
+
+.foto:hover .foto-legenda i{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* foto ainda não adicionada: espaço reservado */
+
+.foto.vazia{
+    cursor:default;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px dashed #333;
+    box-shadow:none;
+}
+
+.foto.vazia:hover{
+    transform:none;
+    box-shadow:none;
+}
+
+.foto.vazia::before{
+    content:"\f030";
+    font-family:"Font Awesome 6 Free";
+    font-weight:900;
+    font-size:34px;
+    color:#383838;
+}
+
+.foto.vazia img,
+.foto.vazia .foto-legenda i{
+    display:none;
+}
+
+.foto.vazia .foto-legenda{
+    background:none;
+    justify-content:center;
+    color:#666;
+    font-weight:500;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:1000px){
+
+    .galeria{
+        grid-template-columns:repeat(2, 1fr);
+        grid-auto-rows:220px;
+    }
+}
+
+@media(max-width:768px){
+
+    .pagina-topo{
+        padding:70px 20px 50px;
+        margin-top:75px;
+    }
+
+    .breadcrumb{
+        font-size:12px;
+    }
+
+    .topo-badges span{
+        font-size:12px;
+        padding:7px 14px;
+    }
+
+    .pagina-galeria{
+        padding:45px 0 15px;
+    }
+
+    .galeria{
+        gap:14px;
+        grid-auto-rows:170px;
+    }
+
+    .foto:nth-child(1){
+        grid-column:span 2;
+        grid-row:span 1;
+    }
+
+    .foto{
+        border-radius:16px;
+    }
+
+    .foto-legenda{
+        font-size:14px;
+        padding:30px 14px 12px;
+    }
+}
+
+@media(max-width:480px){
+
+    .galeria{
+        grid-auto-rows:140px;
+        gap:12px;
+    }
+
+    .foto-legenda i{
+        display:none;
+    }
+}

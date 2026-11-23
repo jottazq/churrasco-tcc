@@ -1,0 +1,152 @@
+/* ==========================================
+   VISUALIZADOR DE FOTOS (cardápio + galeria)
+========================================== */
+
+.viewer{
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+    background:rgba(8,8,8,.94);
+    backdrop-filter:blur(10px);
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .3s ease, visibility .3s ease;
+}
+
+.viewer.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.viewer-figure{
+    margin:0 auto;
+    max-width:min(calc(100vw - 180px), 900px);
+    text-align:center;
+    opacity:0;
+    transform:scale(.85);
+    transition:transform .4s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
+}
+
+.viewer.show .viewer-figure{
+    opacity:1;
+    transform:scale(1);
+}
+
+.viewer-figure img{
+    max-width:100%;
+    max-height:76vh;
+    object-fit:contain;
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,.6);
+    transition:opacity .25s ease;
+}
+
+.viewer-figure img.trocando{
+    opacity:0;
+}
+
+.viewer-figure figcaption{
+    margin-top:18px;
+    color:#ffc107;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.8rem;
+    letter-spacing:2px;
+}
+
+.viewer-counter{
+    display:block;
+    margin-top:4px;
+    color:#888;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+.viewer-close{
+    position:fixed;
+    top:20px;
+    right:24px;
+    z-index:10002;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    border:none;
+    background:rgba(255,255,255,.1);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    backdrop-filter:blur(6px);
+    transition:.3s;
+}
+
+.viewer-close:hover{
+    background:#c70000;
+    transform:rotate(90deg);
+}
+
+.viewer-arrow{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:10001;
+    width:56px;
+    height:56px;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(6px);
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    transition:background .3s, color .3s;
+}
+
+.viewer-arrow:hover{
+    background:#c70000;
+    border-color:transparent;
+    color:#ffc107;
+}
+
+.viewer-prev{ left:24px; }
+.viewer-next{ right:24px; }
+
+@media(max-width:768px){
+
+    .viewer{
+        padding:20px;
+    }
+
+    .viewer-figure{
+        max-width:calc(100vw - 40px);
+    }
+
+    .viewer-figure figcaption{
+        font-size:1.4rem;
+    }
+
+    .viewer-close{
+        top:14px;
+        right:14px;
+        width:40px;
+        height:40px;
+    }
+
+    .viewer-arrow{
+        top:auto;
+        bottom:24px;
+        transform:none;
+        width:46px;
+        height:46px;
+        font-size:16px;
+    }
+
+    .viewer-prev{ left:calc(50% - 60px); }
+    .viewer-next{ right:calc(50% - 60px); }
+}
